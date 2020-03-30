@@ -2,6 +2,9 @@ package com.mobven.mmbkittester.menu
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
+import com.mobven.appsecurity.AppSecurity
 import com.mobven.mmbkittester.R
 
 class MenuActivity : AppCompatActivity() {
@@ -40,8 +43,9 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction().replace(
+            supportFragmentManager.beginTransaction().add(
                 R.id.frameContainer, MenuFragment.newInstance(menu)
             ).commit()
         }
