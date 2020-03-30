@@ -27,6 +27,9 @@
         <activity
             android:name=".appsecurity.root.RootDetectionActivity"
             android:label="Root Detection" />
+        <activity
+            android:name=".appsecurity.securetext.SecureTextActivity"
+            android:label="Disable Copy/Paste" />
     </application>
 
 </manifest>
