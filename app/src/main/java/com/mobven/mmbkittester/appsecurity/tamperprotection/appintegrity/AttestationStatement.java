@@ -1,4 +1,4 @@
-package com.mobven.mmbkittester.appsecurity.tamperprotection;
+package com.mobven.mmbkittester.appsecurity.tamperprotection.appintegrity;
 
 import com.google.api.client.json.webtoken.JsonWebSignature;
 import com.google.api.client.util.Base64;

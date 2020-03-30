@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
-    tools:context=".appsecurity.tamperprotection.ValidateAppIntegrityActivity">
+    tools:context=".appsecurity.tamperprotection.appintegrity.ValidateAppIntegrityActivity">
     
     <TextView
         android:id="@+id/doc_validate_app_integrity"

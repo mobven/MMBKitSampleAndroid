@@ -2,16 +2,14 @@ package com.mobven.mmbkittester.menu
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import android.widget.Toast.LENGTH_SHORT
-import com.mobven.appsecurity.AppSecurity
 import com.mobven.mmbkittester.R
 import com.mobven.mmbkittester.appsecurity.root.RootDetectionActivity
 import com.mobven.mmbkittester.appsecurity.screenrecord.ScreenRecordSettingActivity
-import com.mobven.mmbkittester.appsecurity.screenrecord.ScreenRecordTestActivity
 import com.mobven.mmbkittester.appsecurity.securetext.SecureTextActivity
 import com.mobven.mmbkittester.appsecurity.snapshot.SnapshotSettingActivity
-import com.mobven.mmbkittester.appsecurity.tamperprotection.ValidateAppIntegrityActivity
+import com.mobven.mmbkittester.appsecurity.tamperprotection.appintegrity.ValidateAppIntegrityActivity
+import com.mobven.mmbkittester.appsecurity.tamperprotection.forceupdate.ForceUpdateActivity
+import com.mobven.mmbkittester.appsecurity.tamperprotection.marketcheck.MarketCheckActivity
 
 class MenuActivity : AppCompatActivity() {
 
@@ -24,9 +22,9 @@ class MenuActivity : AppCompatActivity() {
                 MenuItem("Prevent Screen Record", redirectClass = ScreenRecordSettingActivity::class.java),
                 MenuItem("PassCode Detection"),
                 MenuItem("Secure Store"),
-                MenuItem("Force Update"),
+                MenuItem("Force Update", redirectClass = ForceUpdateActivity::class.java),
                 MenuItem("Validate App Integrity", redirectClass = ValidateAppIntegrityActivity::class.java),
-                MenuItem("Market Check")
+                MenuItem("Market Check", redirectClass = MarketCheckActivity::class.java)
             )
         ),
         MenuItem(

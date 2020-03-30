@@ -1,10 +1,11 @@
-package com.mobven.mmbkittester.appsecurity.tamperprotection;
+package com.mobven.mmbkittester.appsecurity.tamperprotection.appintegrity;
 
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.json.webtoken.JsonWebSignature;
 import com.mobven.mmbkittester.R;
+import com.mobven.mmbkittester.appsecurity.tamperprotection.appintegrity.AppIntegrityModel;
+import com.mobven.mmbkittester.appsecurity.tamperprotection.appintegrity.AttestationStatement;
 
-import org.apache.http.conn.ssl.AllowAllHostnameVerifier;
 import org.apache.http.conn.ssl.StrictHostnameVerifier;
 import org.apache.http.conn.ssl.X509HostnameVerifier;
 

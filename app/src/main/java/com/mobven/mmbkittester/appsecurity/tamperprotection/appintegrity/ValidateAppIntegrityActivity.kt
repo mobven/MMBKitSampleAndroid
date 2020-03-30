@@ -1,4 +1,4 @@
-package com.mobven.mmbkittester.appsecurity.tamperprotection
+package com.mobven.mmbkittester.appsecurity.tamperprotection.appintegrity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
