@@ -30,6 +30,12 @@
         <activity
             android:name=".appsecurity.securetext.SecureTextActivity"
             android:label="Disable Copy/Paste" />
+        <activity
+            android:name=".appsecurity.screenrecord.ScreenRecordSettingActivity"
+            android:label="Prevent Screen Record" />
+        <activity
+            android:name=".appsecurity.screenrecord.ScreenRecordTestActivity"
+            android:label="Prevent Screen Record" />
     </application>
 
 </manifest>
