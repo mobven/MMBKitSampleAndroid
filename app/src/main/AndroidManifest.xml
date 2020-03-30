@@ -24,6 +24,9 @@
         <activity
             android:name=".appsecurity.snapshot.SnapshotTestActivity"
             android:label="Prevent Snapshot" />
+        <activity
+            android:name=".appsecurity.root.RootDetectionActivity"
+            android:label="Root Detection" />
     </application>
 
 </manifest>

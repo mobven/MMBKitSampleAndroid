@@ -6,6 +6,7 @@ import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import com.mobven.appsecurity.AppSecurity
 import com.mobven.mmbkittester.R
+import com.mobven.mmbkittester.appsecurity.root.RootDetectionActivity
 import com.mobven.mmbkittester.appsecurity.snapshot.SnapshotSettingActivity
 
 class MenuActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class MenuActivity : AppCompatActivity() {
         MenuItem(
             "App Security", arrayListOf(
                 MenuItem("Prevent Snapshots", redirectClass = SnapshotSettingActivity::class.java),
-                MenuItem("Root Detection"),
+                MenuItem("Root Detection", redirectClass = RootDetectionActivity::class.java),
                 MenuItem("Disable Copy/Paste"),
                 MenuItem("Prevent Screen Record"),
                 MenuItem("PassCode Detection"),
