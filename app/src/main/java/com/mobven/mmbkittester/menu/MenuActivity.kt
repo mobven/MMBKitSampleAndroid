@@ -11,6 +11,7 @@ import com.mobven.mmbkittester.appsecurity.screenrecord.ScreenRecordSettingActiv
 import com.mobven.mmbkittester.appsecurity.screenrecord.ScreenRecordTestActivity
 import com.mobven.mmbkittester.appsecurity.securetext.SecureTextActivity
 import com.mobven.mmbkittester.appsecurity.snapshot.SnapshotSettingActivity
+import com.mobven.mmbkittester.appsecurity.tamperprotection.ValidateAppIntegrityActivity
 
 class MenuActivity : AppCompatActivity() {
 
@@ -24,7 +25,7 @@ class MenuActivity : AppCompatActivity() {
                 MenuItem("PassCode Detection"),
                 MenuItem("Secure Store"),
                 MenuItem("Force Update"),
-                MenuItem("Validate App Integrity"),
+                MenuItem("Validate App Integrity", redirectClass = ValidateAppIntegrityActivity::class.java),
                 MenuItem("Market Check")
             )
         ),
