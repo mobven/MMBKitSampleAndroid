@@ -39,6 +39,10 @@
             android:name=".appsecurity.appprotection.passcode.PassCodeDetectionActivity"
             android:label="Pass Code Detection" />
         <activity
+            android:name=".appsecurity.tamperprotection.securestore.SecureStoreActivity"
+            android:label="Secure Store"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
             android:name=".appsecurity.tamperprotection.forceupdate.ForceUpdateActivity"
             android:label="Force Update Activity" />
         <activity

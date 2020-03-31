@@ -11,6 +11,7 @@ import com.mobven.mmbkittester.appsecurity.appprotection.snapshot.SnapshotSettin
 import com.mobven.mmbkittester.appsecurity.tamperprotection.appintegrity.ValidateAppIntegrityActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.forceupdate.ForceUpdateActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.marketcheck.MarketCheckActivity
+import com.mobven.mmbkittester.appsecurity.tamperprotection.securestore.SecureStoreActivity
 
 class MenuActivity : AppCompatActivity() {
 
@@ -22,7 +23,7 @@ class MenuActivity : AppCompatActivity() {
                 MenuItem("Disable Copy/Paste", redirectClass = SecureTextActivity::class.java),
                 MenuItem("Prevent Screen Record", redirectClass = ScreenRecordSettingActivity::class.java),
                 MenuItem("PassCode Detection", redirectClass = PassCodeDetectionActivity::class.java),
-                MenuItem("Secure Store"),
+                MenuItem("Secure Store", redirectClass = SecureStoreActivity::class.java),
                 MenuItem("Force Update", redirectClass = ForceUpdateActivity::class.java),
                 MenuItem("Validate App Integrity", redirectClass = ValidateAppIntegrityActivity::class.java),
                 MenuItem("Market Check", redirectClass = MarketCheckActivity::class.java)
