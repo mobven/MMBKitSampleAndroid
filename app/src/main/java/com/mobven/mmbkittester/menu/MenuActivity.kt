@@ -3,10 +3,11 @@ package com.mobven.mmbkittester.menu
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.mobven.mmbkittester.R
-import com.mobven.mmbkittester.appsecurity.root.RootDetectionActivity
-import com.mobven.mmbkittester.appsecurity.screenrecord.ScreenRecordSettingActivity
-import com.mobven.mmbkittester.appsecurity.securetext.SecureTextActivity
-import com.mobven.mmbkittester.appsecurity.snapshot.SnapshotSettingActivity
+import com.mobven.mmbkittester.appsecurity.appprotection.passcode.PassCodeDetectionActivity
+import com.mobven.mmbkittester.appsecurity.appprotection.root.RootDetectionActivity
+import com.mobven.mmbkittester.appsecurity.appprotection.screenrecord.ScreenRecordSettingActivity
+import com.mobven.mmbkittester.appsecurity.appprotection.securetext.SecureTextActivity
+import com.mobven.mmbkittester.appsecurity.appprotection.snapshot.SnapshotSettingActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.appintegrity.ValidateAppIntegrityActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.forceupdate.ForceUpdateActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.marketcheck.MarketCheckActivity
@@ -20,7 +21,7 @@ class MenuActivity : AppCompatActivity() {
                 MenuItem("Root Detection", redirectClass = RootDetectionActivity::class.java),
                 MenuItem("Disable Copy/Paste", redirectClass = SecureTextActivity::class.java),
                 MenuItem("Prevent Screen Record", redirectClass = ScreenRecordSettingActivity::class.java),
-                MenuItem("PassCode Detection"),
+                MenuItem("PassCode Detection", redirectClass = PassCodeDetectionActivity::class.java),
                 MenuItem("Secure Store"),
                 MenuItem("Force Update", redirectClass = ForceUpdateActivity::class.java),
                 MenuItem("Validate App Integrity", redirectClass = ValidateAppIntegrityActivity::class.java),

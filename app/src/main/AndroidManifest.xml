@@ -10,14 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".appsecurity.tamperprotection.forceupdate.ForceUpdateActivity"
-            android:label="Force Update Activity"/>
-        <activity
-            android:name=".appsecurity.tamperprotection.marketcheck.MarketCheckActivity"
-            android:label="Market Check" />
-        <activity
-            android:name=".appsecurity.tamperprotection.appintegrity.ValidateAppIntegrityActivity"
-            android:label="Validate App Integrity" />
         <activity android:name=".menu.MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,23 +18,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".appsecurity.snapshot.SnapshotSettingActivity"
+            android:name=".appsecurity.appprotection.snapshot.SnapshotSettingActivity"
             android:label="Prevent Snapshot" />
         <activity
-            android:name=".appsecurity.snapshot.SnapshotTestActivity"
+            android:name=".appsecurity.appprotection.snapshot.SnapshotTestActivity"
             android:label="Prevent Snapshot" />
         <activity
-            android:name=".appsecurity.root.RootDetectionActivity"
+            android:name=".appsecurity.appprotection.root.RootDetectionActivity"
             android:label="Root Detection" />
         <activity
-            android:name=".appsecurity.securetext.SecureTextActivity"
+            android:name=".appsecurity.appprotection.securetext.SecureTextActivity"
             android:label="Disable Copy/Paste" />
         <activity
-            android:name=".appsecurity.screenrecord.ScreenRecordSettingActivity"
+            android:name=".appsecurity.appprotection.screenrecord.ScreenRecordSettingActivity"
             android:label="Prevent Screen Record" />
         <activity
-            android:name=".appsecurity.screenrecord.ScreenRecordTestActivity"
+            android:name=".appsecurity.appprotection.screenrecord.ScreenRecordTestActivity"
             android:label="Prevent Screen Record" />
+        <activity
+            android:name=".appsecurity.appprotection.passcode.PassCodeDetectionActivity"
+            android:label="Pass Code Detection" />
+        <activity
+            android:name=".appsecurity.tamperprotection.forceupdate.ForceUpdateActivity"
+            android:label="Force Update Activity" />
+        <activity
+            android:name=".appsecurity.tamperprotection.marketcheck.MarketCheckActivity"
+            android:label="Market Check" />
+        <activity
+            android:name=".appsecurity.tamperprotection.appintegrity.ValidateAppIntegrityActivity"
+            android:label="Validate App Integrity" />
     </application>
 
 </manifest>

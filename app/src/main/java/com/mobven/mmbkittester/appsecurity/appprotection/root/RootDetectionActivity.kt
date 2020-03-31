@@ -1,4 +1,4 @@
-package com.mobven.mmbkittester.appsecurity.root
+package com.mobven.mmbkittester.appsecurity.appprotection.root
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

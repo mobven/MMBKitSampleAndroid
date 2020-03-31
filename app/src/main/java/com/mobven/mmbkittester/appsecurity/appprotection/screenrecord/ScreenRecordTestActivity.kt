@@ -1,4 +1,4 @@
-package com.mobven.mmbkittester.appsecurity.screenrecord
+package com.mobven.mmbkittester.appsecurity.appprotection.screenrecord
 
 import android.os.Bundle
 import com.mobven.appsecurity.AppSecurity

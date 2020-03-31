@@ -1,4 +1,4 @@
-package com.mobven.mmbkittester.appsecurity.securetext
+package com.mobven.mmbkittester.appsecurity.appprotection.securetext
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

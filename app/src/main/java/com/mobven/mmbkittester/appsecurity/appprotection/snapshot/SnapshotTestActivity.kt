@@ -1,4 +1,4 @@
-package com.mobven.mmbkittester.appsecurity.snapshot
+package com.mobven.mmbkittester.appsecurity.appprotection.snapshot
 
 import android.os.Bundle
 import com.mobven.appsecurity.AppSecurity
