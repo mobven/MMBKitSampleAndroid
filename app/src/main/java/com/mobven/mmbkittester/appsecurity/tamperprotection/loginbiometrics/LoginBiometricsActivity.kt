@@ -17,8 +17,6 @@ class LoginBiometricsActivity : AppCompatActivity() {
 
     private fun biometricsTest() {
         val account = "myUniqueAccount"
-        val secondAccount = "mySecondAccount"
-        //AccountSecurity.clearBiometricsKey(secondAccount)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             AccountSecurity.authWithBiometrics(
                 account,
@@ -29,7 +27,7 @@ class LoginBiometricsActivity : AppCompatActivity() {
                     Toast.makeText(this, it.type.name, Toast.LENGTH_SHORT).show()
                 },
                 {
-                    Toast.makeText(this, "Auth successful", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Auth successful: $it", Toast.LENGTH_SHORT).show()
                 },
                 executorActivity = this
             )

@@ -10,6 +10,7 @@
         android:id="@+id/log_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="16dp"
         android:text="Mobile platforms, both iOS and Android provides API’s to authenticate users with biometrics such as finger print, touch ID. But there’s a concern while implementing login with biometrics, as the system API’s does not share any key for the authentication with the application. We add extra security to native API’s by creating secure key for device’s biometric authentication."/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
