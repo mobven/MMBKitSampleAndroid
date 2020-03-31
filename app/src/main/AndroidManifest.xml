@@ -10,7 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".appsecurity.tamperprotection.loginbiometrics.LoginBiometricsActivity"></activity>
         <activity android:name=".menu.MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,6 +51,13 @@
         <activity
             android:name=".appsecurity.tamperprotection.appintegrity.ValidateAppIntegrityActivity"
             android:label="Validate App Integrity" />
+        <activity
+            android:name=".accountsecurity.loginbiometrics.LoginBiometricsActivity"
+            android:label="Login with Biometrics" />
+        <activity
+            android:name=".accountsecurity.timedcache.TimedCacheActivity"
+            android:label="Timed Cache"
+            android:windowSoftInputMode="adjustNothing" />
     </application>
 
 </manifest>

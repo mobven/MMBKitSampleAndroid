@@ -10,7 +10,8 @@ import com.mobven.mmbkittester.appsecurity.appprotection.securetext.SecureTextAc
 import com.mobven.mmbkittester.appsecurity.appprotection.snapshot.SnapshotSettingActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.appintegrity.ValidateAppIntegrityActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.forceupdate.ForceUpdateActivity
-import com.mobven.mmbkittester.appsecurity.tamperprotection.loginbiometrics.LoginBiometricsActivity
+import com.mobven.mmbkittester.accountsecurity.loginbiometrics.LoginBiometricsActivity
+import com.mobven.mmbkittester.accountsecurity.timedcache.TimedCacheActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.marketcheck.MarketCheckActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.securestore.SecureStoreActivity
 
@@ -33,7 +34,7 @@ class MenuActivity : AppCompatActivity() {
         MenuItem(
             "Account Security", arrayListOf(
                 MenuItem("Login with Biometrics", redirectClass = LoginBiometricsActivity::class.java),
-                MenuItem("Timed Cache")
+                MenuItem("Timed Cache", redirectClass = TimedCacheActivity::class.java)
             )
         ),
         MenuItem("Secure Network"),
