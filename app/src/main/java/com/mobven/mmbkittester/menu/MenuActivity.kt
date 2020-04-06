@@ -13,6 +13,7 @@ import com.mobven.mmbkittester.appsecurity.tamperprotection.forceupdate.ForceUpd
 import com.mobven.mmbkittester.appsecurity.tamperprotection.loginbiometrics.LoginBiometricsActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.marketcheck.MarketCheckActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.securestore.SecureStoreActivity
+import com.mobven.mmbkittester.errorkit.CrashlyticsActivity
 
 class MenuActivity : AppCompatActivity() {
 
@@ -42,7 +43,7 @@ class MenuActivity : AppCompatActivity() {
         MenuItem("Permission Manager"),
         MenuItem("Pin Locator"),
         MenuItem("One Link"),
-        MenuItem("Error Kit"),
+        MenuItem("Error Kit", redirectClass = CrashlyticsActivity::class.java),
         MenuItem("Audio2Pay"),
         MenuItem("NFC Payment")
     )

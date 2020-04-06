@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     compileSdkVersion 29
@@ -49,6 +51,7 @@ dependencies {
     implementation group: "com.mobven.framework", name: "core", version: "0.0.104-SNAPSHOT", changing: true
     implementation group: "com.mobven.framework", name: "appsecurity", version: "0.0.105-SNAPSHOT", changing: true
     implementation group: "com.mobven.framework", name: "accountsecurity", version: "0.0.104-SNAPSHOT", changing: true
+    implementation group: "com.mobven.framework", name: "errorkit", version: "0.0.101-SNAPSHOT", changing: true
 }
 
 configurations.all {
