@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "600981037347",
+    "firebase_url": "https://mmbkitsample.firebaseio.com",
+    "project_id": "mmbkitsample",
+    "storage_bucket": "mmbkitsample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600981037347:android:eae23f81e64cf82422ec96",
+        "android_client_info": {
+          "package_name": "com.mobven.mmbkittester"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600981037347-m01rs0ubnk0fntu303vqevpqct13ccno.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIgfv9HPYwRjFa17muYCqc-8y2NdTcVVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600981037347-m01rs0ubnk0fntu303vqevpqct13ccno.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "600981037347-uc9nid01h5edcqbsjjlg69jrrpqihroi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mobven.ios.MMBKitTester"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
