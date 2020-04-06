@@ -58,6 +58,26 @@
             android:name=".accountsecurity.timedcache.TimedCacheActivity"
             android:label="Timed Cache"
             android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".onelink.OneLinkInfoActivity"
+            android:label="OneLink">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.abc.com"
+                    android:pathPrefix="/accounts"
+                    android:scheme="http" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".onelink.OneLinkHandlerActivity"
+            android:label="OneLink" />
     </application>
 
 </manifest>

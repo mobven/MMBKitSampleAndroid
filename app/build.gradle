@@ -49,6 +49,7 @@ dependencies {
     implementation group: "com.mobven.framework", name: "core", version: "0.0.104-SNAPSHOT", changing: true
     implementation group: "com.mobven.framework", name: "appsecurity", version: "0.0.105-SNAPSHOT", changing: true
     implementation group: "com.mobven.framework", name: "accountsecurity", version: "0.0.104-SNAPSHOT", changing: true
+    implementation group: "com.mobven.framework", name: "onelink", version: "0.0.101-SNAPSHOT", changing: true
 }
 
 configurations.all {
