@@ -15,7 +15,7 @@ import com.mobven.mmbkittester.accountsecurity.timedcache.TimedCacheActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.marketcheck.MarketCheckActivity
 import com.mobven.mmbkittester.appsecurity.tamperprotection.securestore.SecureStoreActivity
 import com.mobven.mmbkittester.errorkit.CrashlyticsActivity
-import com.mobven.mmbkittester.onelink.OneLinkInfoActivity
+import com.mobven.mmbkittester.onelink.OneLinkHandlerActivity
 
 class MenuActivity : AppCompatActivity() {
 
@@ -44,7 +44,7 @@ class MenuActivity : AppCompatActivity() {
         MenuItem("State Machine Forms"),
         MenuItem("Permission Manager"),
         MenuItem("Pin Locator"),
-        MenuItem("One Link", redirectClass = OneLinkInfoActivity::class.java),
+        MenuItem("One Link", redirectClass = OneLinkHandlerActivity::class.java),
         MenuItem("Error Kit", redirectClass = CrashlyticsActivity::class.java),
         MenuItem("Audio2Pay"),
         MenuItem("NFC Payment")
