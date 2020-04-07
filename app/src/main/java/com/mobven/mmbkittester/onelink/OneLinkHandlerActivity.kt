@@ -14,7 +14,7 @@ class OneLinkHandlerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onelink_handler)
-        createInfo()
+        createLinks()
         handleLinks()
         AccountSecurity.timedCacheExpireLiveData.observe(this, Observer {
             if (it.first == USER_KEY) {
@@ -28,7 +28,7 @@ class OneLinkHandlerActivity : AppCompatActivity() {
         }
     }
 
-    private fun createInfo() {
+    private fun createLinks() {
         val scheme = "http"
         val host = "www.abc.com"
         val prefixes = arrayListOf("announcements", "sensitive")
