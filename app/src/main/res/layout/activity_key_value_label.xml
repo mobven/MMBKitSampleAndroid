@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/space_large"
+    android:paddingEnd="@dimen/space_large">
+
+    <com.mobven.uicomponents.label.KeyValueLabel
+        android:id="@+id/kv_label_with_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider="@drawable/divider"
+        app:key="Key"
+        app:value="Value"
+        app:vertical_padding="@dimen/space_medium" />
+
+    <com.mobven.uicomponents.label.KeyValueLabel
+        android:id="@+id/kv_label_centered_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider="@drawable/divider"
+        app:key="Key"
+        app:key_gravity_mode="center"
+        app:value="Value which is multilined defining label height"
+        app:value_line_mode="multi"
+        app:vertical_padding="@dimen/space_medium" />
+
+    <com.mobven.uicomponents.label.KeyValueLabel
+        android:id="@+id/kv_label_bottom_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider="@drawable/divider"
+        app:key="Key"
+        app:key_gravity_mode="bottom"
+        app:value="Value which is multilined defining label height"
+        app:value_line_mode="multi"
+        app:vertical_padding="@dimen/space_medium" />
+
+    <com.mobven.uicomponents.label.KeyValueLabel
+        android:id="@+id/kv_label_centered_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider="@drawable/divider"
+        app:key="Key"
+        app:value="Value"
+        app:value_text_gravity="center"
+        app:vertical_padding="@dimen/space_medium" />
+
+    <com.mobven.uicomponents.label.KeyValueLabel
+        android:id="@+id/kv_label_end_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider="@drawable/divider"
+        app:key="Key"
+        app:value="Value"
+        app:value_text_gravity="end"
+        app:vertical_padding="@dimen/space_medium" />
+
+    <com.mobven.uicomponents.label.KeyValueLabel
+        android:id="@+id/kv_label_single_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider="@drawable/divider"
+        app:key="Key"
+        app:key_gravity_mode="bottom"
+        app:value="Value which is multilined defining label height"
+        app:value_line_mode="single"
+        app:vertical_padding="@dimen/space_medium" />
+
+    <com.mobven.uicomponents.label.KeyValueLabel
+        android:id="@+id/kv_label_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider="@drawable/divider"
+        app:key="Key"
+        app:orientation="vertical"
+        app:value="Value which is multilined defining label height"
+        app:value_line_mode="multi"
+        app:vertical_padding="@dimen/space_medium" />
+</LinearLayout>

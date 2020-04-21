@@ -88,6 +88,10 @@
         <activity
             android:name=".onelink.OneLinkSensitiveActivity"
             android:label="OneLink" />
+        <activity
+            android:name=".uicomponents.KeyValueLabelActivity"
+            android:label="KeyValueLabel" />
+
         <service
             android:name=".onelink.OneLinkMessagingService"
             android:exported="false">

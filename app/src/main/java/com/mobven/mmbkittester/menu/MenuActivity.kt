@@ -16,6 +16,7 @@ import com.mobven.mmbkittester.appsecurity.tamperprotection.marketcheck.MarketCh
 import com.mobven.mmbkittester.appsecurity.tamperprotection.securestore.SecureStoreActivity
 import com.mobven.mmbkittester.errorkit.CrashlyticsActivity
 import com.mobven.mmbkittester.onelink.OneLinkHandlerActivity
+import com.mobven.mmbkittester.uicomponents.KeyValueLabelActivity
 
 class MenuActivity : AppCompatActivity() {
 
@@ -40,7 +41,9 @@ class MenuActivity : AppCompatActivity() {
             )
         ),
         MenuItem("Secure Network"),
-        MenuItem("UI Components"),
+        MenuItem("UI Components", arrayListOf(
+            MenuItem("Key-Value Label", redirectClass = KeyValueLabelActivity::class.java)
+        )),
         MenuItem("State Machine Forms"),
         MenuItem("Permission Manager"),
         MenuItem("Pin Locator"),
