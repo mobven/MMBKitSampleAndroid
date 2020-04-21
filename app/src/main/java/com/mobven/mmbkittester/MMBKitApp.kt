@@ -11,6 +11,7 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.mobven.accountsecurity.AccountSecurity
 import com.mobven.appsecurity.AppSecurity
 import com.mobven.core.MMBKit
+import com.mobven.errorkit.ErrorKit
 import com.mobven.onelink.OneLink
 
 
@@ -18,7 +19,7 @@ class MMBKitApp: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        MMBKit.init(this, AppSecurity, AccountSecurity, OneLink)
+        MMBKit.init(this, AppSecurity, AccountSecurity, OneLink, ErrorKit)
         createNotificationChannel()
         FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener {
             Log.e("FirebaseIId", it.token)
