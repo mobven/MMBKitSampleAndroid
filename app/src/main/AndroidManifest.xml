@@ -91,6 +91,9 @@
         <activity
             android:name=".uicomponents.KeyValueLabelActivity"
             android:label="KeyValueLabel" />
+        <activity
+            android:name=".uicomponents.KeyValueListActivity"
+            android:label="KeyValueList" />
 
         <service
             android:name=".onelink.OneLinkMessagingService"

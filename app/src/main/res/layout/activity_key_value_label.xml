@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         app:divider="@drawable/divider"
         app:key="Key"
+        app:key_style="@style/MyKeyTextStyle"
         app:value="Value"
+        app:value_style="@style/MyValueTextStyle"
         app:vertical_padding="@dimen/space_medium" />
 
     <com.mobven.uicomponents.label.KeyValueLabel
@@ -23,8 +25,10 @@
         app:divider="@drawable/divider"
         app:key="Key"
         app:key_gravity_mode="center"
+        app:key_style="@style/MyKeyTextStyle"
         app:value="Value which is multilined defining label height"
         app:value_line_mode="multi"
+        app:value_style="@style/MyValueTextStyle"
         app:vertical_padding="@dimen/space_medium" />
 
     <com.mobven.uicomponents.label.KeyValueLabel
@@ -34,8 +38,10 @@
         app:divider="@drawable/divider"
         app:key="Key"
         app:key_gravity_mode="bottom"
+        app:key_style="@style/MyKeyTextStyle"
         app:value="Value which is multilined defining label height"
         app:value_line_mode="multi"
+        app:value_style="@style/MyValueTextStyle"
         app:vertical_padding="@dimen/space_medium" />
 
     <com.mobven.uicomponents.label.KeyValueLabel
@@ -44,7 +50,9 @@
         android:layout_height="wrap_content"
         app:divider="@drawable/divider"
         app:key="Key"
+        app:key_style="@style/MyKeyTextStyle"
         app:value="Value"
+        app:value_style="@style/MyValueTextStyle"
         app:value_text_gravity="center"
         app:vertical_padding="@dimen/space_medium" />
 
@@ -54,7 +62,9 @@
         android:layout_height="wrap_content"
         app:divider="@drawable/divider"
         app:key="Key"
+        app:key_style="@style/MyKeyTextStyle"
         app:value="Value"
+        app:value_style="@style/MyValueTextStyle"
         app:value_text_gravity="end"
         app:vertical_padding="@dimen/space_medium" />
 
@@ -65,8 +75,10 @@
         app:divider="@drawable/divider"
         app:key="Key"
         app:key_gravity_mode="bottom"
+        app:key_style="@style/MyKeyTextStyle"
         app:value="Value which is multilined defining label height"
         app:value_line_mode="single"
+        app:value_style="@style/MyValueTextStyle"
         app:vertical_padding="@dimen/space_medium" />
 
     <com.mobven.uicomponents.label.KeyValueLabel
@@ -75,8 +87,10 @@
         android:layout_height="wrap_content"
         app:divider="@drawable/divider"
         app:key="Key"
+        app:key_style="@style/MyKeyTextStyle"
         app:orientation="vertical"
         app:value="Value which is multilined defining label height"
         app:value_line_mode="multi"
+        app:value_style="@style/MyValueTextStyle"
         app:vertical_padding="@dimen/space_medium" />
 </LinearLayout>

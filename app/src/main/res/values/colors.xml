@@ -8,4 +8,7 @@
     <color name="pass">#8BC34A</color>
     <color name="fail">#FF5252</color>
     <color name="problem">#0097A7</color>
+
+    <color name="silver_sand">#B9BEC2</color>
+    <color name="limed_spruce">#333D47</color>
 </resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mobven.uicomponents.list.KeyValueList
+        android:id="@+id/kv_label_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_large"
+        android:layout_marginEnd="@dimen/space_large"
+        app:layout_constraintTop_toBottomOf="@+id/edt_secure"
+        app:list_divider="@drawable/divider"
+        app:list_extra_divider_padding="@dimen/space_medium"
+        app:list_item_per_divider="3"
+        app:list_key_line_mode="single"
+        app:list_key_style="@style/MyKeyTextStyle"
+        app:list_value_line_mode="multi"
+        app:list_value_style="@style/MyValueTextStyle"
+        app:list_value_text_gravity="end"
+        app:list_vertical_padding="@dimen/space_small" />
+
+</LinearLayout>
