@@ -13,9 +13,7 @@ class MarketCheckActivity : AppCompatActivity() {
         setContentView(R.layout.activity_market_check)
         btn_check.setOnClickListener {
             AppSecurity.isMyAppInstalledFromMarket().apply {
-                if (not()) {
-                    text_log.text = "Not installed valid sources!!!"
-                }
+                text_log.text = "Not installed valid sources!!!"
             }
         }
     }

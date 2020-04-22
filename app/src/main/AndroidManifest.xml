@@ -95,6 +95,10 @@
             android:name=".uicomponents.KeyValueListActivity"
             android:label="KeyValueList" />
 
+        <activity android:name=".uicomponents.ToolbarActivity"
+            android:theme="@style/ToolbarTheme"
+            android:label="Toolbar" />
+
         <service
             android:name=".onelink.OneLinkMessagingService"
             android:exported="false">
