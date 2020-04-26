@@ -99,6 +99,9 @@
             android:theme="@style/ToolbarTheme"
             android:label="Toolbar" />
 
+        <activity android:name=".uicomponents.CustomPopupsActivity"
+            android:label="Custom Popups" />
+
         <service
             android:name=".onelink.OneLinkMessagingService"
             android:exported="false">
