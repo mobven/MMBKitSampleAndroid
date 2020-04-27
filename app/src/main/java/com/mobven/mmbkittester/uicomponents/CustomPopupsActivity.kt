@@ -22,6 +22,10 @@ class CustomPopupsActivity: AppCompatActivity() {
         button_triple.setOnClickListener {
             CustomTripleButtonDialog(this).create().show()
         }
+
+        button_custom.setOnClickListener {
+            CustomPopup(this).create().show()
+        }
     }
 
 }
