@@ -101,6 +101,9 @@
 
         <activity android:name=".uicomponents.CustomPopupsActivity"
             android:label="Custom Popups" />
+        <activity
+            android:name=".uicomponents.AmountInputActivity"
+            android:label="AmountInputView" />
 
         <service
             android:name=".onelink.OneLinkMessagingService"

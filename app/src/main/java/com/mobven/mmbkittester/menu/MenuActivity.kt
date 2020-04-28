@@ -16,10 +16,7 @@ import com.mobven.mmbkittester.appsecurity.tamperprotection.marketcheck.MarketCh
 import com.mobven.mmbkittester.appsecurity.tamperprotection.securestore.SecureStoreActivity
 import com.mobven.mmbkittester.errorkit.CrashlyticsActivity
 import com.mobven.mmbkittester.onelink.OneLinkHandlerActivity
-import com.mobven.mmbkittester.uicomponents.CustomPopupsActivity
-import com.mobven.mmbkittester.uicomponents.KeyValueLabelActivity
-import com.mobven.mmbkittester.uicomponents.KeyValueListActivity
-import com.mobven.mmbkittester.uicomponents.ToolbarActivity
+import com.mobven.mmbkittester.uicomponents.*
 
 class MenuActivity : AppCompatActivity() {
 
@@ -48,7 +45,8 @@ class MenuActivity : AppCompatActivity() {
             MenuItem("Key-Value Label", redirectClass = KeyValueLabelActivity::class.java),
             MenuItem("Key-Value List", redirectClass = KeyValueListActivity::class.java),
             MenuItem("Toolbar Activity", redirectClass = ToolbarActivity::class.java),
-            MenuItem("Custom Popups", redirectClass = CustomPopupsActivity::class.java)
+            MenuItem("Custom Popups", redirectClass = CustomPopupsActivity::class.java),
+            MenuItem("Amount Input View", redirectClass = AmountInputActivity::class.java)
         )),
         MenuItem("State Machine Forms"),
         MenuItem("Permission Manager"),
