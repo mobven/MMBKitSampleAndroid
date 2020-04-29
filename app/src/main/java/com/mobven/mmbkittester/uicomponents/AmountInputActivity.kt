@@ -16,7 +16,7 @@ class AmountInputActivity : AppCompatActivity() {
             CurrencyData("TRY")
         ))
         amountInput.selectCurrency(2)
-        amountInput.setAmount(1000.0)
+        amountInput.setAmount(1000.0.toBigDecimal())
     }
 
     class CurrencyData(private val text: String) : AmountInputView.CurrencyItem {
