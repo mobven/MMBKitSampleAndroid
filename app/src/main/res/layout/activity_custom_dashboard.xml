@@ -12,7 +12,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/button"
-        app:layoutType="grid" />
+        app:layoutType="grid"
+        app:spanCount="3" />
 
     <Button
         android:id="@+id/button"

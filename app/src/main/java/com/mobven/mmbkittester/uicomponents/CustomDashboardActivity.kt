@@ -29,5 +29,4 @@ class CustomDashboardActivity: AppCompatActivity() {
 
         }
     }
-
 }
