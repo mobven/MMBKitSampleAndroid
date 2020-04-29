@@ -95,18 +95,25 @@
             android:name=".uicomponents.KeyValueListActivity"
             android:label="KeyValueList" />
 
-        <activity android:name=".uicomponents.ToolbarActivity"
-            android:theme="@style/ToolbarTheme"
-            android:label="Toolbar" />
+        <activity
+            android:name=".uicomponents.ToolbarActivity"
+            android:label="Toolbar"
+            android:theme="@style/ToolbarTheme" />
 
-        <activity android:name=".uicomponents.CustomPopupsActivity"
+        <activity
+            android:name=".uicomponents.CustomPopupsActivity"
             android:label="Custom Popups" />
         <activity
             android:name=".uicomponents.AmountInputActivity"
             android:label="AmountInputView" />
 
-        <activity android:name=".uicomponents.CustomDashboardActivity"
-            android:label="Custom Dashboard"/>
+        <activity
+            android:name=".uicomponents.CustomDashboardActivity"
+            android:label="Custom Dashboard" />
+
+        <activity
+            android:name=".uicomponents.AddOnsActivity"
+            android:label="Add-ons" />
 
         <service
             android:name=".onelink.OneLinkMessagingService"

@@ -47,7 +47,8 @@ class MenuActivity : AppCompatActivity() {
             MenuItem("Toolbar Activity", redirectClass = ToolbarActivity::class.java),
             MenuItem("Custom Popups", redirectClass = CustomPopupsActivity::class.java),
             MenuItem("Amount Input View", redirectClass = AmountInputActivity::class.java),
-            MenuItem("Custom Dashboard", redirectClass = CustomDashboardActivity::class.java)
+            MenuItem("Custom Dashboard", redirectClass = CustomDashboardActivity::class.java),
+            MenuItem("Add-on Features", redirectClass = AddOnsActivity::class.java)
         )),
         MenuItem("State Machine Forms"),
         MenuItem("Permission Manager"),
