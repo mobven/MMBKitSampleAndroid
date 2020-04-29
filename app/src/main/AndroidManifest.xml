@@ -105,6 +105,9 @@
             android:name=".uicomponents.AmountInputActivity"
             android:label="AmountInputView" />
 
+        <activity android:name=".uicomponents.CustomDashboardActivity"
+            android:label="Custom Dashboard"/>
+
         <service
             android:name=".onelink.OneLinkMessagingService"
             android:exported="false">
