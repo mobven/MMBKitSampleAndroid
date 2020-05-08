@@ -115,6 +115,10 @@
             android:name=".uicomponents.AddOnsActivity"
             android:label="Add-ons" />
 
+        <activity
+            android:name=".statemachine.StateMachineFormsActivity"
+            android:label="State Machine Form" />
+
         <service
             android:name=".onelink.OneLinkMessagingService"
             android:exported="false">
