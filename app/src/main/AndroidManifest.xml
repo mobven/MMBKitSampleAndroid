@@ -119,6 +119,10 @@
             android:name=".statemachine.StateMachineFormsActivity"
             android:label="State Machine Form" />
 
+        <activity
+            android:name=".statemachine.StateMachineFormsSecondActivity"
+            android:label="State Machine Form Second" />
+
         <service
             android:name=".onelink.OneLinkMessagingService"
             android:exported="false">
