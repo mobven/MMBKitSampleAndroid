@@ -17,6 +17,7 @@ import com.mobven.mmbkittester.appsecurity.tamperprotection.securestore.SecureSt
 import com.mobven.mmbkittester.errorkit.CrashlyticsActivity
 import com.mobven.mmbkittester.onelink.OneLinkHandlerActivity
 import com.mobven.mmbkittester.statemachine.StateMachineActivity
+import com.mobven.mmbkittester.statemachine.StateMachineFormsActivity
 import com.mobven.mmbkittester.uicomponents.*
 
 class MenuActivity : AppCompatActivity() {
@@ -51,7 +52,8 @@ class MenuActivity : AppCompatActivity() {
             //MenuItem("Custom Dashboard", redirectClass = CustomDashboardActivity::class.java),
             MenuItem("Add-on Features", redirectClass = AddOnsActivity::class.java)
         )),
-        MenuItem("State Machine Forms", redirectClass = StateMachineActivity::class.java),
+        MenuItem("State Machine", redirectClass = StateMachineActivity::class.java),
+        MenuItem("State Machine Forms", redirectClass = StateMachineFormsActivity::class.java),
         MenuItem("Permission Manager"),
         MenuItem("Pin Locator"),
         MenuItem("One Link", redirectClass = OneLinkHandlerActivity::class.java),
