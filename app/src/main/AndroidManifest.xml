@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mobven.mmbkittester">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".MMBKitApp"
         android:allowBackup="true"
@@ -10,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".statemachine.StateMachineActivity" />
         <activity
             android:name=".errorkit.CrashlyticsActivity"
             android:label="Crashlytics Test" />
@@ -64,7 +67,6 @@
         <activity
             android:name=".onelink.OneLinkHandlerActivity"
             android:label="OneLink">
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -80,7 +82,6 @@
                     android:pathPrefix="/sensitive"
                     android:scheme="http" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".onelink.OneLinkAnnouncementsActivity"
@@ -94,23 +95,19 @@
         <activity
             android:name=".uicomponents.KeyValueListActivity"
             android:label="KeyValueList" />
-
         <activity
             android:name=".uicomponents.ToolbarActivity"
             android:label="Toolbar"
             android:theme="@style/ToolbarTheme" />
-
         <activity
             android:name=".uicomponents.CustomPopupsActivity"
             android:label="Custom Popups" />
         <activity
             android:name=".uicomponents.AmountInputActivity"
             android:label="AmountInputView" />
-
         <activity
             android:name=".uicomponents.CustomDashboardActivity"
             android:label="Custom Dashboard" />
-
         <activity
             android:name=".uicomponents.AddOnsActivity"
             android:label="Add-ons" />
