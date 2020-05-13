@@ -1,9 +1,11 @@
 package com.mobven.mmbkittester.statemachine
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.mobven.mmbkittester.R
 import com.mobven.statemachine.model.StateMachineItem
@@ -39,6 +41,8 @@ class StateMachineFragment: Fragment() {
         state_machine.setItemBinder(StateMachineForm.ItemType.TEXT, TextInputBinder(requireContext(), state_machine))
         state_machine.setItemBinder(StateMachineForm.ItemType.ACTION, MaterialButtonBinder(requireContext(), state_machine))
         state_machine.setItemBinder(StateMachineForm.ItemType.SELECT, PickerInputBinder(requireContext(), state_machine))
+        state_machine.setItemBinder(StateMachineForm.ItemType.RADIO, RadioInputBinder(requireContext(), state_machine))
+        state_machine.setItemBinder(StateMachineForm.ItemType.CHECKBOX, CheckboxInputBinder(requireContext(), state_machine))
 
         arguments?.getParcelableArrayList<Results>(ARG_KEY_FORM_ITEMS)?.let { arrayList ->
             val results = arrayList.filter { it.objectId == arguments?.getString(ARG_FORM_ID) }
@@ -53,7 +57,7 @@ class StateMachineFragment: Fragment() {
                         fields.actionType,
                         fields.value,
                         null,
-                        StateMachineRule(fields.rules?.regex, fields.rules?.message),
+                        StateMachineRule(fields.rules?.isRequired, fields.rules?.regex, fields.rules?.message),
                         fields.toStateMachineOptionList().orEmpty()
                     )
                 }
@@ -69,6 +73,14 @@ class StateMachineFragment: Fragment() {
                     addToBackStack(null)
                     commit()
                 }
+            }
+
+            state_machine.requestListener = { _, _ ->
+                Log.i("REQUEST", "REQ OK")
+            }
+
+            state_machine.errorListener = {
+                Toast.makeText(requireContext(), it[0].message, Toast.LENGTH_SHORT).show()
             }
         }
     }
