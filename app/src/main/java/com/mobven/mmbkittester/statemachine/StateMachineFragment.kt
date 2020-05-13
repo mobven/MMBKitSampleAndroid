@@ -53,7 +53,7 @@ class StateMachineFragment: Fragment() {
                         fields.actionType,
                         fields.value,
                         null,
-                        StateMachineRule(fields.rules?.regex, fields.rules?.message),
+                        StateMachineRule(fields.rules?.isRequired, fields.rules?.regex, fields.rules?.message),
                         fields.toStateMachineOptionList().orEmpty()
                     )
                 }
