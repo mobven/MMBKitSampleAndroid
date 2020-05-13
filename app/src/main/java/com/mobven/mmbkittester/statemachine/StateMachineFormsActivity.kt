@@ -18,7 +18,7 @@ class StateMachineFormsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_state_machine_forms)
         stateMachineForm.setItemBinder(StateMachineForm.ItemType.TEXT, EditTextBinder(this))
         stateMachineForm.setItemBinder(StateMachineForm.ItemType.ACTION, ButtonBinder(this))
-        stateMachineForm.setData(
+/*        stateMachineForm.setData(
             listOf(
                 StateMachineItem("1", null, "Hint1", "text", null, null, null, null),
                 StateMachineItem("2", null, "Hint2", "text", "Value", null, null, null),
@@ -30,7 +30,7 @@ class StateMachineFormsActivity : AppCompatActivity() {
             startActivity(Intent(this, StateMachineFormsSecondActivity::class.java).apply {
                 putExtra("FORM_KEY", Gson().toJson(formData))
             })
-        }
+        }*/
     }
 
 }

@@ -26,14 +26,14 @@ class StateMachineFormsSecondActivity : AppCompatActivity() {
         stateMachineForm.oldFormsData = oldData
         stateMachineForm.setItemBinder(StateMachineForm.ItemType.TEXT, EditTextBinder(this))
         stateMachineForm.setItemBinder(StateMachineForm.ItemType.ACTION, ButtonBinder(this))
-        stateMachineForm.setData(
+/*        stateMachineForm.setData(
             listOf(
                 StateMachineItem("1", null, "Hint1", "text", null, null, null, null),
                 StateMachineItem("2", null, "Hint2", "text", "Value", null, null, null),
                 StateMachineItem("3", null, "Hint3", "text", null, null, null, null),
                 StateMachineItem("4", null, null, "action", "request", "Submit", null, null)
             )
-        )
+        )*/
         stateMachineForm.requestListener = { _, formData ->
             MaterialAlertDialogBuilder(this).apply {
                 setTitle("Final Data")
