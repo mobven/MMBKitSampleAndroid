@@ -9,7 +9,6 @@ import com.mobven.mmbkittester.uicomponents.AddOnsActivity
 import com.mobven.statemachine.binder.ItemBinder
 import com.mobven.statemachine.model.StateMachineOption
 import com.mobven.statemachine.view.StateMachineForm
-import com.mobven.uicomponents.addons.PickerItem
 import com.mobven.uicomponents.addons.attachMultiSelectPicker
 
 class PickerInputBinder(private val context: Context, private val viewGroup: ViewGroup): ItemBinder<EditText>() {
@@ -45,5 +44,4 @@ class PickerInputBinder(private val context: Context, private val viewGroup: Vie
     ) {
         listener(view.text.toString())
     }
-
 }

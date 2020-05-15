@@ -38,11 +38,11 @@ class StateMachineFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        state_machine.setItemBinder(StateMachineForm.ItemType.TEXT, TextInputBinder(requireContext(), state_machine))
-        state_machine.setItemBinder(StateMachineForm.ItemType.ACTION, MaterialButtonBinder(requireContext(), state_machine))
-        state_machine.setItemBinder(StateMachineForm.ItemType.SELECT, PickerInputBinder(requireContext(), state_machine))
-        state_machine.setItemBinder(StateMachineForm.ItemType.RADIO, RadioInputBinder(requireContext(), state_machine))
-        state_machine.setItemBinder(StateMachineForm.ItemType.CHECKBOX, CheckboxInputBinder(requireContext(), state_machine))
+        state_machine.register(StateMachineForm.ItemType.TEXT, TextInputBinder(requireContext(), state_machine))
+        state_machine.register(StateMachineForm.ItemType.ACTION, MaterialButtonBinder(requireContext(), state_machine))
+        state_machine.register(StateMachineForm.ItemType.SELECT, PickerInputBinder(requireContext(), state_machine))
+        state_machine.register(StateMachineForm.ItemType.RADIO, RadioInputBinder(requireContext(), state_machine))
+        state_machine.register(StateMachineForm.ItemType.CHECKBOX, CheckboxInputBinder(requireContext(), state_machine))
 
         arguments?.getParcelableArrayList<Results>(ARG_KEY_FORM_ITEMS)?.let { arrayList ->
             val results = arrayList.filter { it.objectId == arguments?.getString(ARG_FORM_ID) }
@@ -64,7 +64,7 @@ class StateMachineFragment: Fragment() {
             }
 
             stateMachineItemList?.let { list ->
-                state_machine.setData(list)
+                state_machine.feed(list)
             }
 
             state_machine.nextListener = { _ ->
@@ -82,6 +82,11 @@ class StateMachineFragment: Fragment() {
             state_machine.errorListener = {
                 Toast.makeText(requireContext(), it[0].message, Toast.LENGTH_SHORT).show()
             }
+
+            state_machine.backListener = {
+
+            }
+
         }
     }
 

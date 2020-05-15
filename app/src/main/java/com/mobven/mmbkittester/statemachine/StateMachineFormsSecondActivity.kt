@@ -24,8 +24,8 @@ class StateMachineFormsSecondActivity : AppCompatActivity() {
         val oldData: JsonArray =
             Gson().fromJson(intent.getStringExtra("FORM_KEY"), JsonArray::class.java)
         stateMachineForm.oldFormsData = oldData
-        stateMachineForm.setItemBinder(StateMachineForm.ItemType.TEXT, EditTextBinder(this))
-        stateMachineForm.setItemBinder(StateMachineForm.ItemType.ACTION, ButtonBinder(this))
+        stateMachineForm.register(StateMachineForm.ItemType.TEXT, EditTextBinder(this))
+        stateMachineForm.register(StateMachineForm.ItemType.ACTION, ButtonBinder(this))
 /*        stateMachineForm.setData(
             listOf(
                 StateMachineItem("1", null, "Hint1", "text", null, null, null, null),

@@ -30,14 +30,14 @@ class StateMachineFormsActivity : AppCompatActivity() {
             )
         }
 
-        stateMachineForm.setItemBinder(StateMachineForm.ItemType.TEXT, EditTextBinder(this))
-        stateMachineForm.setItemBinder(
+        stateMachineForm.register(StateMachineForm.ItemType.TEXT, EditTextBinder(this))
+        stateMachineForm.register(
             StateMachineForm.ItemType.TEXT,
             ID_ACCOUNT,
             accountSelectionBinder!!
         )
-        stateMachineForm.setItemBinder(StateMachineForm.ItemType.ACTION, ButtonBinder(this))
-        stateMachineForm.setData(
+        stateMachineForm.register(StateMachineForm.ItemType.ACTION, ButtonBinder(this))
+        stateMachineForm.feed(
             listOf(
                 StateMachineItem(
                     ID_ACCOUNT, null, "Hesap Seç", "text", null, null, null, null,

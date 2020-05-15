@@ -39,8 +39,7 @@ data class Fields (
 data class Rules (
     @SerializedName("isRequired") val isRequired : Boolean?,
     @SerializedName("regex") val regex : String?,
-    @SerializedName("message") val message : String?,
-    @SerializedName("isRequired") val isRequired: Boolean?
+    @SerializedName("message") val message : String?
 ) : Parcelable
 
 @Parcelize
