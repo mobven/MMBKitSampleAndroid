@@ -53,7 +53,7 @@ class MenuActivity : AppCompatActivity() {
             MenuItem("Add-on Features", redirectClass = AddOnsActivity::class.java)
         )),
         //MenuItem("State Machine", redirectClass = StateMachineActivity::class.java),
-        MenuItem("State Machine Forms", redirectClass = StateMachineFormsActivity::class.java),
+        MenuItem("State Machine Forms", redirectClass = StateMachineActivity::class.java),
         MenuItem("Permission Manager"),
         MenuItem("Pin Locator"),
         MenuItem("One Link", redirectClass = OneLinkHandlerActivity::class.java),
