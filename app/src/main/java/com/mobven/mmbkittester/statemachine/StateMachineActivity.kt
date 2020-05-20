@@ -2,6 +2,7 @@ package com.mobven.mmbkittester.statemachine
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.gson.Gson
 import com.mobven.mmbkittester.R
 import retrofit2.Call
 import retrofit2.Callback
@@ -18,7 +19,7 @@ class StateMachineActivity : AppCompatActivity() {
     }
 
     private fun getForm(savedInstanceState: Bundle?) {
-        RetrofitParseClient.create().buildForm().enqueue(object : Callback<Form> {
+        /*RetrofitParseClient.create().buildForm().enqueue(object : Callback<Form> {
             override fun onFailure(call: Call<Form>, t: Throwable) {
 
             }
@@ -27,7 +28,9 @@ class StateMachineActivity : AppCompatActivity() {
                 buildForm(response.body()?.results, savedInstanceState)
             }
 
-        })
+        })*/
+        val results = Gson().fromJson(StateMachineJson.jsonData, Form::class.java)
+        buildForm(results.results, savedInstanceState)
     }
 
     private fun buildForm(forms: ArrayList<Results>?, savedInstanceState: Bundle?) {

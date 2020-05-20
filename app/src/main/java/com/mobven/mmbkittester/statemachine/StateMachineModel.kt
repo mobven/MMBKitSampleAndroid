@@ -15,7 +15,7 @@ data class Results (
 ) : Parcelable
 
 data class Form (
-    @SerializedName("results") val results : ArrayList<Results>?
+    @SerializedName("forms") val results : ArrayList<Results>?
 )
 
 @Parcelize
