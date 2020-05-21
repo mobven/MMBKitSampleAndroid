@@ -111,18 +111,18 @@
         <activity
             android:name=".uicomponents.AddOnsActivity"
             android:label="Add-ons" />
-
         <activity
             android:name=".statemachine.StateMachineFormsActivity"
             android:label="State Machine Form" />
-
         <activity
             android:name=".statemachine.StateMachineFormsSecondActivity"
             android:label="State Machine Form Second" />
-
         <activity
             android:name=".statemachine.AccountSelectionActivity"
             android:label="Select Account" />
+        <activity
+            android:name=".securenetwork.AuthorizationActivity"
+            android:label="Authorization" />
 
         <service
             android:name=".onelink.OneLinkMessagingService"
