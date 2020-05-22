@@ -56,6 +56,7 @@ dependencies {
     implementation group: "com.mobven.framework", name: "onelink", version: "0.0.101-SNAPSHOT", changing: true
     implementation group: "com.mobven.framework", name: "uicomponents", version: "0.0.103-SNAPSHOT", changing: true
     implementation group: "com.mobven.framework", name: "statemachine", version: "0.0.101-SNAPSHOT", changing: true
+    implementation group: "com.mobven.framework", name: "network", version: "0.0.101-SNAPSHOT", changing: true
 }
 
 configurations.all {
