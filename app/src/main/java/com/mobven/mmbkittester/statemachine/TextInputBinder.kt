@@ -4,6 +4,7 @@ import android.content.Context
 import android.text.InputType
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.widget.addTextChangedListener
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.mobven.mmbkittester.R
@@ -26,6 +27,26 @@ class TextInputBinder(private val context: Context, private val viewGroup: ViewG
             editText?.inputType = InputType.TYPE_TEXT_VARIATION_WEB_PASSWORD or InputType.TYPE_CLASS_TEXT
         }
         return view
+    }
+
+    override fun bindValue(
+        view: TextInputLayout,
+        inputType: StateMachineForm.InputType,
+        value: String
+    ) {
+        val editText = view.findViewById<TextInputEditText>(R.id.input_edittext)
+        editText.setText(value)
+    }
+
+    override fun bindValueChangeListener(
+        view: TextInputLayout,
+        inputType: StateMachineForm.InputType,
+        listener: (String) -> Unit
+    ) {
+        val editText = view.findViewById<TextInputEditText>(R.id.input_edittext)
+        editText.addTextChangedListener {
+            listener(it.toString())
+        }
     }
 
 }

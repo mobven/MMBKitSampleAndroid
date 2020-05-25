@@ -25,4 +25,14 @@ class CheckboxInputBinder(private val context: Context, private val viewGroup: V
         view.text = label
     }
 
+    override fun bindStatusChangeListener(
+        view: MaterialCheckBox,
+        inputType: StateMachineForm.InputType,
+        listener: (Boolean) -> Unit
+    ) {
+        view.setOnCheckedChangeListener { _ , isChecked ->
+            listener(isChecked)
+        }
+    }
+
 }

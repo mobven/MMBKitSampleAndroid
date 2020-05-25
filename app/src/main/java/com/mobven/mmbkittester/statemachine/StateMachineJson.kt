@@ -15,11 +15,10 @@ object StateMachineJson {
                             "placeholder": "Name Surname",
                             "type": "text",
                             "inputType": "text",
-                            "value": "",
                             "rules": {
                                 "regex": "([a-zA-Z',.-]+( [a-zA-Z',.-]+)*){2,30}",
                                 "message": "Name and Surname is not valid!",
-                                "isRequired": false
+                                "isRequired": true
                             }
                         },
                         {
@@ -28,22 +27,10 @@ object StateMachineJson {
                             "placeholder": "Identity Number",
                             "type": "text",
                             "inputType": "password",
-                            "value": "",
                             "rules": {
                                 "regex": "[a-zA-Z0-9',.-]{5,20}",
                                 "message": "Password must contain 5 to 20 characters.",
-                                "isRequired": false
-                            }
-                        },
-                        {
-                            "id": "textarea",
-                            "label": "Personal Info",
-                            "placeholder": "Personal Info",
-                            "type": "textarea",
-                            "inputType": "",
-                            "value": "",
-                            "rules": {
-                                "isRequired": false
+                                "isRequired": true
                             }
                         },
                         {
@@ -51,7 +38,6 @@ object StateMachineJson {
                             "label": "Choose City",
                             "placeholder": "Choose City",
                             "type": "select",
-                            "value": "",
                             "options": [
                                 {
                                     "id": "34",
@@ -64,6 +50,7 @@ object StateMachineJson {
                             ],
                             "rules": {
                                 "message": "Please choose your city.",
+                                "regex": ".+",
                                 "isRequired": true
                             }
                         },
@@ -72,7 +59,6 @@ object StateMachineJson {
                             "label": "Gender",
                             "placeholder": "Gender",
                             "type": "radio",
-                            "value": "",
                             "options": [
                                 {
                                     "id": "0",
@@ -90,10 +76,9 @@ object StateMachineJson {
                         },
                         {
                             "id": "t&c",
-                            "label": "Terms and conditionserms",
+                            "label": "Terms and conditions",
                             "placeholder": "",
                             "type": "checkbox",
-                            "value": "",
                             "status": false,
                             "rules": {
                                 "message": "Please accept terms and conditions.",
@@ -105,7 +90,6 @@ object StateMachineJson {
                             "label": "Privacy Policy",
                             "placeholder": "",
                             "type": "checkbox",
-                            "value": "",
                             "status": false,
                             "rules": {
                                 "message": "Please accept privacy policy.",
@@ -130,11 +114,10 @@ object StateMachineJson {
                             "placeholder": "Amount",
                             "type": "text",
                             "inputType": "number",
-                            "value": "",
                             "rules": {
                                 "regex": "([a-zA-Z',.-]+( [a-zA-Z',.-]+)*){2,30}",
                                 "message": "Name and Surname is not valid!",
-                                "isRequired": false
+                                "isRequired": true
                             }
                         },
                         {
@@ -143,22 +126,10 @@ object StateMachineJson {
                             "placeholder": "Identity Number",
                             "type": "text",
                             "inputType": "password",
-                            "value": "",
                             "rules": {
                                 "regex": "[a-zA-Z0-9',.-]{5,20}",
                                 "message": "Password must contain 5 to 20 characters.",
-                                "isRequired": false
-                            }
-                        },
-                        {
-                            "id": "textarea",
-                            "label": "Personal Info",
-                            "placeholder": "Personal Info",
-                            "type": "textarea",
-                            "inputType": "",
-                            "value": "",
-                            "rules": {
-                                "isRequired": false
+                                "isRequired": true
                             }
                         },
                         {
@@ -166,7 +137,6 @@ object StateMachineJson {
                             "label": "Choose City",
                             "placeholder": "Choose City",
                             "type": "select",
-                            "value": "",
                             "options": [
                                 {
                                     "id": "34",
@@ -187,7 +157,6 @@ object StateMachineJson {
                             "label": "Gender",
                             "placeholder": "Gender",
                             "type": "radio",
-                            "value": "",
                             "options": [
                                 {
                                     "id": "0",

@@ -32,4 +32,15 @@ class RadioInputBinder(private val context: Context, private val viewGroup: View
         femaleRadio.text = options[0].name
     }
 
+    override fun bindValueChangeListener(
+        view: RadioGroup,
+        inputType: StateMachineForm.InputType,
+        listener: (String) -> Unit
+    ) {
+        view.setOnCheckedChangeListener { group, checkedId ->
+            val checkedRadio = group.findViewById<RadioButton>(checkedId)
+            listener(checkedRadio.text.toString())
+        }
+    }
+
 }

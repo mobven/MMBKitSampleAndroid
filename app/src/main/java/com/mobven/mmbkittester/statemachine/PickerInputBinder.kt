@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.EditText
+import androidx.core.widget.addTextChangedListener
 import com.mobven.mmbkittester.R
 import com.mobven.mmbkittester.uicomponents.AddOnsActivity
 import com.mobven.statemachine.binder.ItemBinder
@@ -42,6 +43,8 @@ class PickerInputBinder(private val context: Context, private val viewGroup: Vie
         inputType: StateMachineForm.InputType,
         listener: (String) -> Unit
     ) {
-        listener(view.text.toString())
+        view.addTextChangedListener {
+            listener(it.toString())
+        }
     }
 }
