@@ -123,6 +123,9 @@
         <activity
             android:name=".securenetwork.AuthorizationActivity"
             android:label="Authorization" />
+        <activity
+            android:name=".securenetwork.AlbumActivity"
+            android:label="Album" />
 
         <service
             android:name=".onelink.OneLinkMessagingService"

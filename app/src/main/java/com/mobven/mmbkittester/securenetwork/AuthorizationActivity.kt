@@ -4,17 +4,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.mobven.mmbkittester.R
 import com.mobven.mmbkittester.extension.showToast
-import com.mobven.mmbkittester.securenetwork.client.SpotifyApi
-import com.mobven.mmbkittester.securenetwork.model.Album
 import com.mobven.network.SecureNetwork
 import kotlinx.android.synthetic.main.activity_authorization.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
-class AuthorizationActivity: AppCompatActivity() {
+class AuthorizationActivity : AppCompatActivity() {
 
-    private lateinit var spotifyApi: SpotifyApi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +20,6 @@ class AuthorizationActivity: AppCompatActivity() {
             clientSecret = "496354bb3fbb45498bab4180dc7fe1f3"
             isDebug = true
         }
-        spotifyApi = SecureNetwork.create(SpotifyApi::class.java)
         btnGetToken.setOnClickListener {
             SecureNetwork.tokenize { isSuccess, throwable ->
                 if (isSuccess) {
@@ -37,15 +30,7 @@ class AuthorizationActivity: AppCompatActivity() {
             }
         }
         btnGetAlbum.setOnClickListener {
-            spotifyApi.getAlbum(edtAlbumId.text.toString()).enqueue(object : Callback<Album> {
-                override fun onFailure(call: Call<Album>, t: Throwable) {
-                    showToast("Failure:${t.message}")
-                }
-
-                override fun onResponse(call: Call<Album>, response: Response<Album>) {
-                    showToast(response.body()?.name ?: "No response")
-                }
-            })
+            startActivity(AlbumActivity.callingIntent(this, edtAlbumId.text.toString()))
         }
     }
 
