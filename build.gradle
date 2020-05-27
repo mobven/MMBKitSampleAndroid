@@ -24,8 +24,8 @@ allprojects {
         maven {
             url "http://capture.mobven.com:8081/artifactory/libs-snapshot-local"
             credentials {
-                username = "bkt"
-                password = "BktFramework"
+                username = "YOUR_USER_NAME_HERE"
+                password = "YOUR_PASSWORD_HERE"
             }
         }
         maven {
