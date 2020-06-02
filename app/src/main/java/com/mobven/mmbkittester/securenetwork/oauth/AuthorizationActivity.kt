@@ -1,4 +1,4 @@
-package com.mobven.mmbkittester.securenetwork
+package com.mobven.mmbkittester.securenetwork.oauth
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -29,10 +29,10 @@ class AuthorizationActivity : AppCompatActivity() {
                 }
             }
         }
-        btnExpire.setOnClickListener {
+        /*btnExpire.setOnClickListener {
             SecureNetwork.authToken = "ExpiredToken"
             showToast("Expired token")
-        }
+        }*/
         btnGetAlbum.setOnClickListener {
             startActivity(AlbumActivity.callingIntent(this, edtAlbumId.text.toString()))
         }

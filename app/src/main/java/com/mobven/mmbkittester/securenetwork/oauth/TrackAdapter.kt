@@ -1,11 +1,11 @@
-package com.mobven.mmbkittester.securenetwork
+package com.mobven.mmbkittester.securenetwork.oauth
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mobven.mmbkittester.R
-import com.mobven.mmbkittester.securenetwork.model.Track
+import com.mobven.mmbkittester.securenetwork.oauth.model.Track
 import kotlinx.android.synthetic.main.item_track.view.*
 
 class TrackAdapter(private val data: List<Track>) :

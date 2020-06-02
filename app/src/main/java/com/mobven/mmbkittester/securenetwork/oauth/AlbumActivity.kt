@@ -1,4 +1,4 @@
-package com.mobven.mmbkittester.securenetwork
+package com.mobven.mmbkittester.securenetwork.oauth
 
 import android.content.Context
 import android.content.Intent
@@ -6,17 +6,21 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.mobven.mmbkittester.R
 import com.mobven.mmbkittester.extension.showToast
-import com.mobven.mmbkittester.securenetwork.client.SpotifyApi
-import com.mobven.mmbkittester.securenetwork.model.Album
+import com.mobven.mmbkittester.securenetwork.oauth.client.SpotifyApi
+import com.mobven.mmbkittester.securenetwork.oauth.model.Album
 import com.mobven.network.SecureNetwork
 import kotlinx.android.synthetic.main.activity_album.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.converter.gson.GsonConverterFactory
 
 class AlbumActivity : AppCompatActivity() {
 
-    private val spotifyApi: SpotifyApi = SecureNetwork.create(SpotifyApi::class.java)
+    private val spotifyApi: SpotifyApi =
+        SecureNetwork.create(SpotifyApi::class.java, retrofitConfigCallback = {
+            it.addConverterFactory(GsonConverterFactory.create())
+        })
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +34,10 @@ class AlbumActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<Album>, response: Response<Album>) {
                     response.body()?.let {
                         textTitle.text = "${it.name} - ${it.artists.firstOrNull()?.name.orEmpty()}"
-                        rvTracks.adapter = TrackAdapter(it.tracks?.items.orEmpty())
+                        rvTracks.adapter =
+                            TrackAdapter(
+                                it.tracks?.items.orEmpty()
+                            )
                     } ?: showToast("No response")
                 }
             })

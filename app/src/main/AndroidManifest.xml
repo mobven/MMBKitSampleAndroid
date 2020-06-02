@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mobven.mmbkittester">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".MMBKitApp"
@@ -121,11 +121,14 @@
             android:name=".statemachine.AccountSelectionActivity"
             android:label="Select Account" />
         <activity
-            android:name=".securenetwork.AuthorizationActivity"
+            android:name=".securenetwork.oauth.AuthorizationActivity"
             android:label="Authorization" />
         <activity
-            android:name=".securenetwork.AlbumActivity"
+            android:name=".securenetwork.oauth.AlbumActivity"
             android:label="Album" />
+        <activity
+            android:name=".securenetwork.cryptography.CryptographyActivity"
+            android:label="Cryptography" />
 
         <service
             android:name=".onelink.OneLinkMessagingService"

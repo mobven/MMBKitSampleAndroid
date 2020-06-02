@@ -1,7 +1,7 @@
-package com.mobven.mmbkittester.securenetwork.client
+package com.mobven.mmbkittester.securenetwork.oauth.client
 
-import com.mobven.mmbkittester.securenetwork.model.Album
-import com.mobven.mmbkittester.securenetwork.model.Track
+import com.mobven.mmbkittester.securenetwork.oauth.model.Album
+import com.mobven.mmbkittester.securenetwork.oauth.model.Track
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

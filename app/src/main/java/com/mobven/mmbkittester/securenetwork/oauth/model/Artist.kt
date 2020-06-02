@@ -1,4 +1,4 @@
-package com.mobven.mmbkittester.securenetwork.model
+package com.mobven.mmbkittester.securenetwork.oauth.model
 
 import com.google.gson.annotations.SerializedName
 
