@@ -13,12 +13,13 @@ class AuthorizationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authorization)
-        SecureNetwork.apply {
-            baseUrl = "https://api.spotify.com/v1/"
-            tokenUrl = "https://accounts.spotify.com/api/token/"
-            clientId = "45007d1680b9491680b50384349ad198"
-            clientSecret = "496354bb3fbb45498bab4180dc7fe1f3"
+        with(SecureNetwork) {
             isDebug = true
+            enableOAuth2(
+                "https://accounts.spotify.com/api/token/",
+                "45007d1680b9491680b50384349ad198",
+                "496354bb3fbb45498bab4180dc7fe1f3"
+            )
         }
         btnGetToken.setOnClickListener {
             SecureNetwork.tokenize { isSuccess, throwable ->

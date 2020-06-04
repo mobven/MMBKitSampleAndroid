@@ -20,24 +20,27 @@ class CryptographyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cryptography)
-
+        
         with(SecureNetwork) {
-            handshakeUrl = "http://www.cigkofteciahmet.com/crypt/rsa/validData.php"
-            baseUrl = "http://www.cigkofteciahmet.com/crypt/"
             isDebug = true
-            cryptoApi = create(CryptoApi::class.java, retrofitConfigCallback = {
-                it.addConverterFactory(GsonConverterFactory.create())
-            })
-        }
-
-
-        btnInitRSA.setOnClickListener {
-            SecureNetwork.startEncryptedCommunication(
+            enableCryptography(
+                "http://www.cigkofteciahmet.com/crypt/rsa/validData.php",
                 ("MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyLNbf8jtBlVTGjJZmiRzRhO1y" +
                         "bGKlZpvaL5VbBFTJCKypyc7kpTtOuXRgCY+jYbZ4+OKHicvy9pE8qSqSzFOxXmGK" +
                         "00gziT+8lc0fpk8SLFeE/H1RF+qjh1k4zmqmSRe576bcLGRAJW0NtSWS+/+VwQFy" +
                         "yUjRM67OjCh4huRaGwIDAQAB").decodeFromBase64()
-            ) { isSuccess, error ->
+            )
+            cryptoApi = createCryptoAPI(
+                "http://www.cigkofteciahmet.com/crypt/",
+                CryptoApi::class.java,
+                retrofitConfigCallback = {
+                    it.addConverterFactory(GsonConverterFactory.create())
+                })
+        }
+
+
+        btnInitRSA.setOnClickListener {
+            SecureNetwork.handshake { isSuccess, error ->
                 if (isSuccess) {
                     showToast("init success")
                 } else {

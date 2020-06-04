@@ -18,9 +18,12 @@ import retrofit2.converter.gson.GsonConverterFactory
 class AlbumActivity : AppCompatActivity() {
 
     private val spotifyApi: SpotifyApi =
-        SecureNetwork.create(SpotifyApi::class.java, retrofitConfigCallback = {
-            it.addConverterFactory(GsonConverterFactory.create())
-        })
+        SecureNetwork.createOAuthAPI(
+            "https://api.spotify.com/v1/",
+            SpotifyApi::class.java,
+            retrofitConfigCallback = {
+                it.addConverterFactory(GsonConverterFactory.create())
+            })
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
