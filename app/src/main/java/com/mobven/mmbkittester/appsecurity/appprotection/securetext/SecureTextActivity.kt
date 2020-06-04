@@ -2,7 +2,7 @@ package com.mobven.mmbkittester.appsecurity.appprotection.securetext
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.mobven.core.extension.isSecure
+import com.mobven.appsecurity.securefield.isSecure
 import com.mobven.mmbkittester.R
 import kotlinx.android.synthetic.main.activity_secure_text.*
 
