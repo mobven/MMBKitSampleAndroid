@@ -57,6 +57,8 @@ dependencies {
     implementation group: "com.mobven.framework", name: "uicomponents", version: "0.0.103-SNAPSHOT", changing: true
     implementation group: "com.mobven.framework", name: "statemachine", version: "0.0.101-SNAPSHOT", changing: true
     implementation group: "com.mobven.framework", name: "network", version: "0.0.101-SNAPSHOT", changing: true
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.yandex.android:mapkit:3.5.0'
 }
 
 configurations.all {

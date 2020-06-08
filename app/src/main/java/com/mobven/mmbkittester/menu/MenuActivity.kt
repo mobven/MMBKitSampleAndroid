@@ -16,6 +16,8 @@ import com.mobven.mmbkittester.appsecurity.tamperprotection.marketcheck.MarketCh
 import com.mobven.mmbkittester.appsecurity.tamperprotection.securestore.SecureStoreActivity
 import com.mobven.mmbkittester.errorkit.CrashlyticsActivity
 import com.mobven.mmbkittester.onelink.OneLinkHandlerActivity
+import com.mobven.mmbkittester.pinlocator.GoogleMapsActivity
+import com.mobven.mmbkittester.pinlocator.YandexMapsActivity
 import com.mobven.mmbkittester.securenetwork.cryptography.CryptographyActivity
 import com.mobven.mmbkittester.securenetwork.oauth.AuthorizationActivity
 import com.mobven.mmbkittester.statemachine.StateMachineActivity
@@ -58,7 +60,10 @@ class MenuActivity : AppCompatActivity() {
         )),
         MenuItem("State Machine Forms", redirectClass = StateMachineActivity::class.java),
         MenuItem("Permission Manager"),
-        MenuItem("Pin Locator"),
+        MenuItem("Pin Locator", arrayListOf(
+            MenuItem("Google Maps", redirectClass = GoogleMapsActivity::class.java),
+            MenuItem("Yandex Maps", redirectClass = YandexMapsActivity::class.java)
+        )),
         MenuItem("One Link", redirectClass = OneLinkHandlerActivity::class.java),
         MenuItem("Error Kit", redirectClass = CrashlyticsActivity::class.java),
         MenuItem("Audio2Pay"),
