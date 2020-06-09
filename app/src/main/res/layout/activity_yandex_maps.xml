@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.yandex.mapkit.mapview.MapView
-    android:id="@+id/map_yandex"
+<com.mobven.pinlocator.view.PinLocatorView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pinLocatorYandex"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
+    app:map_provider="yandex" />
