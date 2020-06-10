@@ -15,7 +15,9 @@ class GoogleMapsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_google_maps)
-        pinLocatorGoogle.onCreate(this)
-        pinLocatorGoogle.setPins(pins)
+        pinLocatorGoogle.onCreate(this) {
+            pinLocatorGoogle.setPins(pins)
+            pinLocatorGoogle.setCamera(-34.0, 151.0, 5f)
+        }
     }
 }

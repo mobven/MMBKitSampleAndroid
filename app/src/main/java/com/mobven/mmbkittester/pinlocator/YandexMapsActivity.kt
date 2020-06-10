@@ -15,13 +15,15 @@ class YandexMapsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yandex_maps)
-        pinLocatorYandex.onCreate(this, "https://mobven.atlassian.net/browse/BKT-202")
+        pinLocatorYandex.onCreate(this, "https://mobven.atlassian.net/browse/BKT-202") {
+            pinLocatorYandex.setPins(pins)
+            pinLocatorYandex.setCamera(59.945933, 30.320045, 5f, 5f)
+        }
     }
 
     override fun onStart() {
         super.onStart()
         pinLocatorYandex.onStart()
-        pinLocatorYandex.setPins(pins)
     }
 
     override fun onStop() {
