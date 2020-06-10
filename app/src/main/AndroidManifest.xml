@@ -14,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--<meta-data
+        <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="https://mobven.atlassian.net/browse/BKT-202" />-->
+            android:value="https://mobven.atlassian.net/browse/BKT-202" />
 
         <activity android:name=".statemachine.StateMachineActivity" />
         <activity
