@@ -7,9 +7,14 @@ import kotlinx.android.synthetic.main.activity_yandex_maps.*
 
 class YandexMapsActivity : AppCompatActivity() {
 
-    private val pins: List<Pin> = listOf(
-        Pin(-34.0, 151.0, "Sydney", "Diamond of Pacific"),
-        Pin(59.945933, 30.320045, "St. Petersburg","Town of Blyat")
+    private val pins: List<YandexPin> = listOf(
+        YandexPin(-34.0, 151.0, "Sydney", "Diamond of Pacific"),
+        YandexPin(
+            59.945933,
+            30.320045,
+            "St. Petersburg",
+            "Town of Blyat"
+        )
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

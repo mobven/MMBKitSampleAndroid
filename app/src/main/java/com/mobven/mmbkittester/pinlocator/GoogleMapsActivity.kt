@@ -7,9 +7,14 @@ import kotlinx.android.synthetic.main.activity_google_maps.*
 
 class GoogleMapsActivity : AppCompatActivity() {
 
-    private val pins: List<Pin> = listOf(
-        Pin(-34.0, 151.0, "Sydney", "Diamond of Pacific"),
-        Pin(59.945933, 30.320045, "St. Petersburg","Town of Blyat")
+    private val pins: List<GooglePin> = listOf(
+        GooglePin(-34.0, 151.0, "Sydney", "Diamond of Pacific"),
+        GooglePin(
+            59.945933,
+            30.320045,
+            "St. Petersburg",
+            "Town of Blyat"
+        )
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
