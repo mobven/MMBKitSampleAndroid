@@ -1,19 +1,27 @@
 package com.mobven.mmbkittester.pinlocator
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.mobven.mmbkittester.R
+import com.mobven.pinlocator.view.InfoViewBinder
+import com.mobven.pinlocator.view.Pinnable
 import kotlinx.android.synthetic.main.activity_google_maps.*
+import kotlinx.android.synthetic.main.item_pin_detail_google.view.*
 
 class GoogleMapsActivity : AppCompatActivity() {
 
     private val pins: List<GooglePin> = listOf(
-        GooglePin(-34.0, 151.0, "Sydney", "Diamond of Pacific"),
+        GooglePin(-33.8469759,150.3715249, "Sydney", "Not the capital city of Australia"),
         GooglePin(
-            59.945933,
-            30.320045,
-            "St. Petersburg",
-            "Town of Blyat"
+            41.0039643,
+            28.4517462,
+            "İstanbul",
+            "Not the capital city of Turkey"
         )
     )
 
@@ -22,7 +30,27 @@ class GoogleMapsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_google_maps)
         pinLocatorGoogle.onCreate(this) {
             pinLocatorGoogle.setPins(pins)
-            pinLocatorGoogle.setCamera(-34.0, 151.0, 5f)
+            pinLocatorGoogle.setCustomInfoViewBinder(object : InfoViewBinder {
+                override fun bindInfoView(view: View, pin: Pinnable) {
+                    view.txtPinTitle.text = pin.title
+                    view.txtPinDescription.text = pin.description
+                }
+
+                override fun onCreateInfoView(context: Context): View =
+                    LayoutInflater.from(context).inflate(
+                        R.layout.item_pin_detail_google, null, false
+                    )
+
+                override fun onInfoWindowClick(pin: Pinnable, context: Context) {
+                    /*val intent = Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("google.navigation:q=${pin.latitude},${pin.longitude}")
+                    )
+                    context.startActivity(intent)*/
+                    pinLocatorGoogle.launchNavigationToPin(pin)
+                }
+            })
+            pinLocatorGoogle.setCamera(40.993900, 27.840890, 5f)
         }
     }
 }
