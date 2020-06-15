@@ -30,12 +30,24 @@ class AuthorizationActivity : AppCompatActivity() {
                 }
             }
         }
-        /*btnExpire.setOnClickListener {
+        btnExpire.setOnClickListener {
             SecureNetwork.authToken = "ExpiredToken"
             showToast("Expired token")
-        }*/
+        }
         btnGetAlbum.setOnClickListener {
             startActivity(AlbumActivity.callingIntent(this, edtAlbumId.text.toString()))
+        }
+        btnGetTrack.setOnClickListener {
+            startActivity(AlbumActivity.callingIntent(this, trackId = edtTrackId.text.toString()))
+        }
+        btnGetAlbumAndTrack.setOnClickListener {
+            startActivity(
+                AlbumActivity.callingIntent(
+                    this,
+                    edtAlbumId.text.toString(),
+                    edtTrackId.text.toString()
+                )
+            )
         }
     }
 

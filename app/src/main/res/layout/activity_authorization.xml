@@ -4,45 +4,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/edtAlbumId"
-        android:layout_width="0dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputTrack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_medium"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetTrack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/edtTrackId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Track Id"
+            android:text="6DonRyqagGQGdbjMKRy5f7" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btnGetTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_xxlarge"
+        android:text="GET TRACK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/inputAlbum" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputAlbum"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/space_medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="6akEvsycLGftJxYudPjmqK"/>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edtAlbumId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Album Id"
+            android:text="6akEvsycLGftJxYudPjmqK" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
         android:id="@+id/btnGetAlbum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_medium"
         android:text="GET ALBUM"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtAlbumId" />
+        app:layout_constraintTop_toBottomOf="@+id/inputAlbum"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetAlbumAndTrack"/>
+
+    <Button
+        android:id="@+id/btnGetAlbumAndTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET ALBUM AND TRACK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetAlbum"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetToken"/>
 
     <Button
         android:id="@+id/btnGetToken"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_xxlarge"
         android:text="TOKENIZE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGetAlbum" />
+        app:layout_constraintTop_toBottomOf="@+id/btnGetAlbumAndTrack"
+        app:layout_constraintBottom_toTopOf="@+id/btnExpire"/>
 
     <Button
         android:id="@+id/btnExpire"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_xxlarge"
         android:text="EXPIRE TOKEN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGetToken" />
+        app:layout_constraintTop_toBottomOf="@+id/btnGetToken"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

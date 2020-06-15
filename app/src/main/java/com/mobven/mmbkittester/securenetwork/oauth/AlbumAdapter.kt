@@ -8,8 +8,8 @@ import com.mobven.mmbkittester.R
 import com.mobven.mmbkittester.securenetwork.oauth.model.Track
 import kotlinx.android.synthetic.main.item_track.view.*
 
-class TrackAdapter(private val data: List<Track>) :
-    RecyclerView.Adapter<TrackAdapter.TrackViewHolder>() {
+class AlbumAdapter(private val data: ArrayList<Track>) :
+    RecyclerView.Adapter<AlbumAdapter.TrackViewHolder>() {
 
     class TrackViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         fun bind(track: Track) {
@@ -30,6 +30,12 @@ class TrackAdapter(private val data: List<Track>) :
 
     override fun onBindViewHolder(holder: TrackViewHolder, position: Int) {
         holder.bind(data[position])
+    }
+
+    fun setItems(list: List<Track>) {
+        data.clear()
+        data.addAll(list)
+        notifyDataSetChanged()
     }
 
 }
