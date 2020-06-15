@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MMBKitTester</string>
+    <string name="app_name">MobKit Tester</string>
     <string name="doc_validate_app_integrity">
         We use Google SafetyNet Attestation api on this kit. To use this api you need to obtain Android Device Verification Api Key from Google Developer Console. For detailed information you may follow official documentation.
     </string>

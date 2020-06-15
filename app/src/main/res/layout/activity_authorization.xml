@@ -58,8 +58,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GET ALBUM"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnGetAlbumWithError"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputAlbum"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetAlbumAndTrack"/>
+
+    <Button
+        android:id="@+id/btnGetAlbumWithError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET ALBUM SERIALIZE ERROR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnGetAlbum"
         app:layout_constraintTop_toBottomOf="@+id/inputAlbum"
         app:layout_constraintBottom_toTopOf="@+id/btnGetAlbumAndTrack"/>
 

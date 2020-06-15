@@ -5,10 +5,12 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.MergeAdapter
+import com.mobven.errorkit.ErrorKitCallback
 import com.mobven.mmbkittester.R
 import com.mobven.mmbkittester.extension.showToast
 import com.mobven.mmbkittester.securenetwork.oauth.client.SpotifyApi
 import com.mobven.mmbkittester.securenetwork.oauth.model.Album
+import com.mobven.mmbkittester.securenetwork.oauth.model.AlbumError
 import com.mobven.mmbkittester.securenetwork.oauth.model.Track
 import com.mobven.network.SecureNetwork
 import kotlinx.android.synthetic.main.activity_album.*
@@ -36,19 +38,43 @@ class AlbumActivity : AppCompatActivity() {
         setContentView(R.layout.activity_album)
         rvTracks.adapter = MergeAdapter(trackAdapter, albumTitleAdapter, albumAdapter)
         intent.getStringExtra(KEY_ALBUM_ID)?.let { id ->
-            spotifyApi.getAlbum(id).enqueue(object : Callback<Album> {
-                override fun onFailure(call: Call<Album>, t: Throwable) {
-                    showToast("Failure:${t.message}")
+            spotifyApi.getAlbum(id).enqueue(object : ErrorKitCallback<Album> {
+                override fun onFailed(throwable: Throwable) {
+                    showToast("Failure:${throwable.message}")
                 }
 
-                override fun onResponse(call: Call<Album>, response: Response<Album>) {
-                    response.body()?.let {
+                override fun onSuccess(responseBody: Album) {
+                    responseBody.let {
                         albumTitleAdapter.pair = "Requested Album" to it.name.orEmpty()
                         albumAdapter.setItems(it.tracks?.items.orEmpty())
-                    } ?: showToast("No response")
+                    }
+                }
+
+                override fun onUnauthorized() {
+                    showToast("Unauthorized")
                 }
             })
         }
+
+        intent.getStringExtra(KEY_ALBUM_ID_SERIALIZE_ERROR)?.let { id ->
+            spotifyApi.getAlbumError(id).enqueue(object : ErrorKitCallback<AlbumError> {
+                override fun onFailed(throwable: Throwable) {
+                    showToast("Failure:${throwable.message}")
+                }
+
+                override fun onSuccess(responseBody: AlbumError) {
+                    responseBody.let {
+                        albumTitleAdapter.pair = "Requested Album" to it.name.orEmpty()
+                        albumAdapter.setItemsError(it.tracks?.itemsError)
+                    }
+                }
+
+                override fun onUnauthorized() {
+                    showToast("Unauthorized")
+                }
+            })
+        }
+
         intent.getStringExtra(KEY_TRACK_ID)?.let { id ->
             spotifyApi.getTrack(id).enqueue(object : Callback<Track> {
                 override fun onFailure(call: Call<Track>, t: Throwable) {
@@ -66,15 +92,18 @@ class AlbumActivity : AppCompatActivity() {
 
     companion object {
         private const val KEY_ALBUM_ID = "album_id"
+        private const val KEY_ALBUM_ID_SERIALIZE_ERROR = "serialize_error"
         private const val KEY_TRACK_ID = "track_id"
         fun callingIntent(
             context: Context,
             albumId: String? = null,
+            albumIdError: String? = null,
             trackId: String? = null
         ): Intent =
             Intent(context, AlbumActivity::class.java).apply {
                 putExtra(KEY_ALBUM_ID, albumId)
                 putExtra(KEY_TRACK_ID, trackId)
+                putExtra(KEY_ALBUM_ID_SERIALIZE_ERROR, albumIdError)
             }
     }
 }

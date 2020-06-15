@@ -24,14 +24,14 @@ class CryptographyActivity : AppCompatActivity() {
         with(SecureNetwork) {
             isDebug = true
             enableCryptography(
-                "http://www.cigkofteciahmet.com/crypt/rsa/validData.php",
+                "https://capture.mobven.com/crypt/rsa/validData.php",
                 ("MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyLNbf8jtBlVTGjJZmiRzRhO1y" +
                         "bGKlZpvaL5VbBFTJCKypyc7kpTtOuXRgCY+jYbZ4+OKHicvy9pE8qSqSzFOxXmGK" +
                         "00gziT+8lc0fpk8SLFeE/H1RF+qjh1k4zmqmSRe576bcLGRAJW0NtSWS+/+VwQFy" +
                         "yUjRM67OjCh4huRaGwIDAQAB").decodeFromBase64()
             )
             cryptoApi = createCryptoAPI(
-                "http://www.cigkofteciahmet.com/crypt/",
+                "https://capture.mobven.com/crypt/",
                 CryptoApi::class.java,
                 retrofitConfigCallback = {
                     it.addConverterFactory(GsonConverterFactory.create())

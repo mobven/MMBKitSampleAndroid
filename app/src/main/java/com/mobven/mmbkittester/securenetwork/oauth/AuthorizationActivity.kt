@@ -35,8 +35,13 @@ class AuthorizationActivity : AppCompatActivity() {
             showToast("Expired token")
         }
         btnGetAlbum.setOnClickListener {
-            startActivity(AlbumActivity.callingIntent(this, edtAlbumId.text.toString()))
+            startActivity(AlbumActivity.callingIntent(this, albumId = edtAlbumId.text.toString()))
         }
+
+        btnGetAlbumWithError.setOnClickListener {
+            startActivity(AlbumActivity.callingIntent(this, albumIdError = edtAlbumId.text.toString()))
+        }
+
         btnGetTrack.setOnClickListener {
             startActivity(AlbumActivity.callingIntent(this, trackId = edtTrackId.text.toString()))
         }

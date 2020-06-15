@@ -38,4 +38,10 @@ class AlbumAdapter(private val data: ArrayList<Track>) :
         notifyDataSetChanged()
     }
 
+    fun setItemsError(list: Track?) {
+        data.clear()
+        list?.let { data.add(it) }
+        notifyDataSetChanged()
+    }
+
 }
