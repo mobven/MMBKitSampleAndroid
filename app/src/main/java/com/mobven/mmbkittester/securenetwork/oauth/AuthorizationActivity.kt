@@ -30,10 +30,10 @@ class AuthorizationActivity : AppCompatActivity() {
                 }
             }
         }
-        btnExpire.setOnClickListener {
+        /*btnExpire.setOnClickListener {
             SecureNetwork.authToken = "ExpiredToken"
             showToast("Expired token")
-        }
+        }*/
         btnGetAlbum.setOnClickListener {
             startActivity(AlbumActivity.callingIntent(this, albumId = edtAlbumId.text.toString()))
         }

@@ -2,7 +2,7 @@ package com.mobven.mmbkittester.pinlocator
 
 import android.graphics.Bitmap
 import com.mobven.mmbkittester.R
-import com.mobven.pinlocator.view.Pinnable
+import com.mobven.pinlocator.model.Pinnable
 
 data class GooglePin(
     val lat: Double,

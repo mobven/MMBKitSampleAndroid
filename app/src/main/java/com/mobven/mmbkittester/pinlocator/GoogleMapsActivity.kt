@@ -1,15 +1,13 @@
 package com.mobven.mmbkittester.pinlocator
 
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.mobven.mmbkittester.R
-import com.mobven.pinlocator.view.InfoViewBinder
-import com.mobven.pinlocator.view.Pinnable
+import com.mobven.pinlocator.model.InfoViewBinder
+import com.mobven.pinlocator.model.Pinnable
 import kotlinx.android.synthetic.main.activity_google_maps.*
 import kotlinx.android.synthetic.main.item_pin_detail_google.view.*
 
