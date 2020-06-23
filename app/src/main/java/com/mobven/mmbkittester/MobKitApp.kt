@@ -7,20 +7,19 @@ import android.content.Context
 import android.os.Build
 import android.util.Log
 import com.google.firebase.iid.FirebaseInstanceId
-import com.google.firebase.messaging.FirebaseMessagingService
 import com.mobven.accountsecurity.AccountSecurity
 import com.mobven.appsecurity.AppSecurity
-import com.mobven.core.MMBKit
+import com.mobven.core.MobKit
 import com.mobven.errorkit.ErrorKit
 import com.mobven.network.SecureNetwork
 import com.mobven.onelink.OneLink
 
 
-class MMBKitApp: Application() {
+class MobKitApp: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        MMBKit.init(this, AppSecurity, AccountSecurity, OneLink, ErrorKit, SecureNetwork)
+        MobKit.init(this, AppSecurity, AccountSecurity, OneLink, ErrorKit, SecureNetwork)
         createNotificationChannel()
         FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener {
             Log.e("FirebaseIId", it.token)

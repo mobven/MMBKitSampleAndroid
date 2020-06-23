@@ -3,7 +3,7 @@ package com.mobven.mmbkittester.onelink
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.mobven.mmbkittester.MMBKitApp.Companion.DEFAULT_NOTIFICATION_CHANNEL
+import com.mobven.mmbkittester.MobKitApp.Companion.DEFAULT_NOTIFICATION_CHANNEL
 import com.mobven.onelink.OneLink
 import com.mobven.onelink.model.NotificationParams
 import com.mobven.onelink.model.OneLinkableState

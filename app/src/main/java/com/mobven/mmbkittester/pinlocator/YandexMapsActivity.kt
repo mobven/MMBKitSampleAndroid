@@ -28,8 +28,8 @@ class YandexMapsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_yandex_maps)
-        pinLocatorYandex.onCreate(this, "https://mobven.atlassian.net/browse/BKT-202") {
-            pinLocatorYandex.setCamera(41.041726,29.0029393, 5f, 5f)
+        pinLocatorYandex.onCreate(this, "https://tech.yandex.com/maps/mapkit/doc/3.x/concepts/android/quickstart-docpage/") {
+            pinLocatorYandex.setCamera(41.041726,29.0029393, 14f, 5f)
         }
     }
 

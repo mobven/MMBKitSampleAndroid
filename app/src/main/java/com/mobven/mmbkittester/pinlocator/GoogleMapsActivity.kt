@@ -40,11 +40,6 @@ class GoogleMapsActivity : AppCompatActivity() {
                     )
 
                 override fun onInfoWindowClick(pin: Pinnable, context: Context) {
-                    /*val intent = Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("google.navigation:q=${pin.latitude},${pin.longitude}")
-                    )
-                    context.startActivity(intent)*/
                     pinLocatorGoogle.launchNavigationToPin(pin)
                 }
             })
