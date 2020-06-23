@@ -22,7 +22,6 @@ import com.mobven.mmbkittester.securenetwork.cryptography.CryptographyActivity
 import com.mobven.mmbkittester.securenetwork.oauth.AuthorizationActivity
 import com.mobven.mmbkittester.statemachine.StateMachineActivity
 import com.mobven.mmbkittester.uicomponents.*
-import com.newrelic.agent.android.NewRelic
 
 class MenuActivity : AppCompatActivity() {
 
@@ -74,10 +73,6 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-
-        NewRelic.withApplicationToken(
-            "eu01xx8722a9e05128b8db50b8ec5ca76de62a51c4-NRMA"
-        ).start(this.application);
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction().add(
