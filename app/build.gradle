@@ -58,6 +58,7 @@ dependencies {
     implementation group: "com.mobven.framework", name: "statemachine", version: "0.0.101-SNAPSHOT", changing: true
     implementation group: "com.mobven.framework", name: "network", version: "0.0.101-SNAPSHOT", changing: true
     implementation group: "com.mobven.framework", name: "pinlocator", version: "0.0.101-SNAPSHOT", changing: true
+    implementation group: "com.mobven.framework", name: "localizeit", version: "0.0.101-SNAPSHOT", changing: true
 }
 
 configurations.all {

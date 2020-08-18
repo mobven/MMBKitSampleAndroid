@@ -5,21 +5,34 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
+import android.os.LocaleList
 import android.util.Log
 import com.google.firebase.iid.FirebaseInstanceId
 import com.mobven.accountsecurity.AccountSecurity
 import com.mobven.appsecurity.AppSecurity
 import com.mobven.core.MobKit
 import com.mobven.errorkit.ErrorKit
+import com.mobven.localizeit.LocalizeIt
 import com.mobven.network.SecureNetwork
 import com.mobven.onelink.OneLink
 
 
-class MobKitApp: Application() {
+class MobKitApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        MobKit.init(this, AppSecurity, AccountSecurity, OneLink, ErrorKit, SecureNetwork)
+        MobKit.init(
+            this,
+            AppSecurity,
+            AccountSecurity,
+            OneLink,
+            ErrorKit,
+            SecureNetwork,
+            LocalizeIt.apply {
+                stringsFile = "strings.json"
+                supportedLanguages = listOf(LANGUAGE_ENGLISH, LANGUAGE_TURKISH)
+            }
+        )
         createNotificationChannel()
         FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener {
             Log.e("FirebaseIId", it.token)
@@ -47,5 +60,8 @@ class MobKitApp: Application() {
 
     companion object {
         const val DEFAULT_NOTIFICATION_CHANNEL = "Default"
+        const val LANGUAGE_ENGLISH = "en"
+        const val LANGUAGE_TURKISH = "tr"
+
     }
 }

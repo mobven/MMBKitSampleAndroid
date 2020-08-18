@@ -7,5 +7,6 @@ import kotlinx.android.parcel.Parcelize
 data class MenuItem(
     val name: String,
     val subItems: ArrayList<MenuItem> = arrayListOf(),
-    val redirectClass: Class<*>? = null
+    val redirectClass: Class<*>? = null,
+    val isLocalized: Boolean = false
 ) : Parcelable
