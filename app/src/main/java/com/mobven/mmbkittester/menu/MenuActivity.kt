@@ -17,6 +17,7 @@ import com.mobven.mmbkittester.appsecurity.tamperprotection.securestore.SecureSt
 import com.mobven.mmbkittester.errorkit.CrashlyticsActivity
 import com.mobven.mmbkittester.localizeit.LanguageSelectionActivity
 import com.mobven.mmbkittester.onelink.OneLinkHandlerActivity
+import com.mobven.mmbkittester.permissionmanager.PermissionManagerActivity
 import com.mobven.mmbkittester.pinlocator.GoogleMapsActivity
 import com.mobven.mmbkittester.pinlocator.YandexMapsActivity
 import com.mobven.mmbkittester.securenetwork.cryptography.CryptographyActivity
@@ -80,7 +81,11 @@ class MenuActivity : AppCompatActivity() {
             redirectClass = StateMachineActivity::class.java,
             isLocalized = true
         ),
-        MenuItem("permission_manager", isLocalized = true),
+        MenuItem(
+            "permission_manager",
+            redirectClass = PermissionManagerActivity::class.java,
+            isLocalized = true
+        ),
         MenuItem(
             "pin_locator", arrayListOf(
                 MenuItem("Google Maps", redirectClass = GoogleMapsActivity::class.java),

@@ -15,6 +15,7 @@ import com.mobven.errorkit.ErrorKit
 import com.mobven.localizeit.LocalizeIt
 import com.mobven.network.SecureNetwork
 import com.mobven.onelink.OneLink
+import com.mobven.permissionmanager.PermissionManager
 
 
 class MobKitApp : Application() {
@@ -31,7 +32,8 @@ class MobKitApp : Application() {
             LocalizeIt.apply {
                 stringsFile = "strings.json"
                 supportedLanguages = listOf(LANGUAGE_ENGLISH, LANGUAGE_TURKISH)
-            }
+            },
+            PermissionManager
         )
         createNotificationChannel()
         FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener {
