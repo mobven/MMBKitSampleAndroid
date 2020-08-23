@@ -22,7 +22,6 @@ class CryptographyActivity : AppCompatActivity() {
         setContentView(R.layout.activity_cryptography)
         
         with(SecureNetwork) {
-            isDebug = true
             enableCryptography(
                 "https://capture.mobven.com/crypt/rsa/validData.php",
                 ("MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyLNbf8jtBlVTGjJZmiRzRhO1y" +

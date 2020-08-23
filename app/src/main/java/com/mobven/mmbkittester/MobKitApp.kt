@@ -24,6 +24,7 @@ class MobKitApp : Application() {
         super.onCreate()
         MobKit.init(
             this,
+            true,
             AppSecurity,
             AccountSecurity,
             OneLink,

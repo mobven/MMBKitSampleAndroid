@@ -14,7 +14,6 @@ class AuthorizationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authorization)
         with(SecureNetwork) {
-            isDebug = true
             enableOAuth2(
                 "https://accounts.spotify.com/api/token/",
                 "45007d1680b9491680b50384349ad198",
