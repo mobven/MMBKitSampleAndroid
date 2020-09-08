@@ -6,6 +6,7 @@ import androidx.lifecycle.Observer
 import com.google.gson.JsonArray
 import com.mobven.localizeit.LocalizeIt
 import com.mobven.localizeit.setLocalizedText
+import com.mobven.mmbkittester.MobKitApp.Companion.LANGUAGE_ALBANIAN
 import com.mobven.mmbkittester.MobKitApp.Companion.LANGUAGE_ENGLISH
 import com.mobven.mmbkittester.MobKitApp.Companion.LANGUAGE_TURKISH
 import com.mobven.mmbkittester.R
@@ -23,6 +24,7 @@ class LanguageSelectionActivity : AppCompatActivity() {
         when (LocalizeIt.selectedLanguage.value) {
             LANGUAGE_ENGLISH -> rdEnglish.isChecked = true
             LANGUAGE_TURKISH -> rdTurkish.isChecked = true
+            LANGUAGE_ALBANIAN -> rdAlbanian.isChecked = true
         }
         rdEnglish.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -32,6 +34,11 @@ class LanguageSelectionActivity : AppCompatActivity() {
         rdTurkish.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 LocalizeIt.changeLanguage(LANGUAGE_TURKISH)
+            }
+        }
+        rdAlbanian.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                LocalizeIt.changeLanguage(LANGUAGE_ALBANIAN)
             }
         }
         RetrofitTypicodeClient.create().getTags().enqueue(object : Callback<JsonArray> {
@@ -44,8 +51,10 @@ class LanguageSelectionActivity : AppCompatActivity() {
                     LocalizeIt.appendStringsJson(it)
                     LocalizeIt.selectedLanguage.observe(this@LanguageSelectionActivity, Observer {
                         title = LocalizeIt.getString("language_selection")
+
                         rdEnglish.setLocalizedText("english")
                         rdTurkish.setLocalizedText("turkish")
+                        rdAlbanian.setLocalizedText("albanian")
                     })
                 }
             }

@@ -31,6 +31,7 @@ class PermissionManagerActivity : AppCompatActivity() {
             cbLocation.isChecked = false
             cbContacts.isChecked = false
             cbMicrophone.isChecked = false
+
             PermissionManager.requestPermission(
                 this,
                 permissionList.toTypedArray(),

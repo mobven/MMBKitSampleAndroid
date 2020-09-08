@@ -23,6 +23,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_large" />
 
+        <RadioButton
+            android:id="@+id/rdAlbanian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_large" />
+
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,7 +32,8 @@ class MobKitApp : Application() {
             SecureNetwork,
             LocalizeIt.apply {
                 stringsFile = "strings.json"
-                supportedLanguages = listOf(LANGUAGE_ENGLISH, LANGUAGE_TURKISH)
+                supportedLanguages = listOf(LANGUAGE_ENGLISH, LANGUAGE_TURKISH, LANGUAGE_ALBANIAN)
+                fallbackLanguage = LANGUAGE_ENGLISH
             },
             PermissionManager
         )
@@ -65,6 +66,7 @@ class MobKitApp : Application() {
         const val DEFAULT_NOTIFICATION_CHANNEL = "Default"
         const val LANGUAGE_ENGLISH = "en"
         const val LANGUAGE_TURKISH = "tr"
+        const val LANGUAGE_ALBANIAN = "sq"
 
     }
 }

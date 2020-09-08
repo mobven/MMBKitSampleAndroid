@@ -2,56 +2,67 @@
   {
     "key" : "app_security",
     "en"  : "App Security",
-    "tr"  : "Uygulama Güvenliği"
+    "tr"  : "Uygulama Güvenliği",
+    "sq"  : "Siguria e aplikimit"
   },
   {
     "key" : "account_security",
     "en"  : "Account Security",
-    "tr"  : "Hesap Güvenliği"
+    "tr"  : "Hesap Güvenliği",
+    "sq"  : "Siguria e llogarisë"
   },
   {
     "key" : "secure_network",
     "en"  : "Secure Network",
-    "tr"  : "Güvenli Ağ"
+    "tr"  : "Güvenli Ağ",
+    "sq"  : "Rrjeti i Sigurt"
   },
   {
     "key" : "ui_components",
     "en"  : "UI Components",
-    "tr"  : "Arayüz Bileşenleri"
+    "tr"  : "Arayüz Bileşenleri",
+    "sq"  : "Përbërësit e ndërfaqes së përdoruesit"
   },
   {
     "key" : "state_machine_forms",
     "en"  : "State Machine Forms",
-    "tr"  : "Otomat Formları"
+    "tr"  : "Otomat Formları",
+    "sq"  : "Formularët e faqes"
   },
   {
     "key" : "permission_manager",
     "en"  : "Permission Manager",
-    "tr"  : "İzin Yöneticisi"
+    "tr"  : "İzin Yöneticisi",
+    "sq"  : "Menaxheri i Lejeve"
   },
   {
     "key" : "pin_locator",
     "en"  : "Pin Locator",
-    "tr"  : "İğne Belirleyici"
+    "tr"  : "İğne Belirleyici",
+    "sq"  : "Gjetësi i kunjave"
   },
   {
     "key" : "one_link",
     "en"  : "One Link",
-    "tr"  : "Tek Bağlantı"
+    "tr"  : "Tek Bağlantı",
+    "sq"  : "Një lidhje"
   },
   {
     "key" : "error_kit",
     "en"  : "Error Kit",
-    "tr"  : "Hata Kiti"
+    "tr"  : "Hata Kiti",
+    "sq"  : "Paketimi i gabimeve"
   },
   {
     "key" : "localize_it",
     "en"  : "Localize It",
-    "tr"  : "Yerelleştir Onu"
+    "tr"  : "Yerelleştir Onu",
+    "sq"  : "Lokalizojeni"
   },
   {
     "key" : "network_error",
     "en"  : "Network Error",
-    "tr"  : "Bağlantı Hatası"
+    "tr"  : "Bağlantı Hatası",
+    "sq"  : "Gabim në rrjet"
   }
 ]
