@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.mobven.mmbkittester.R
 import com.mobven.mmbkittester.extension.showToast
 import com.mobven.network.SecureNetwork
+import com.mobven.network.provider.ClientCredentialsProvider
 import kotlinx.android.synthetic.main.activity_authorization.*
 
 class AuthorizationActivity : AppCompatActivity() {
@@ -15,13 +16,17 @@ class AuthorizationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_authorization)
         with(SecureNetwork) {
             enableOAuth2(
-                "https://accounts.spotify.com/api/token/",
-                "45007d1680b9491680b50384349ad198",
-                "496354bb3fbb45498bab4180dc7fe1f3"
+                "https://accounts.spotify.com/api/token/"
             )
         }
+
         btnGetToken.setOnClickListener {
-            SecureNetwork.tokenize { isSuccess, throwable ->
+            SecureNetwork.tokenize(
+                ClientCredentialsProvider(
+                    "45007d1680b9491680b50384349ad198",
+                    "496354bb3fbb45498bab4180dc7fe1f3"
+                )
+            ) { isSuccess, throwable ->
                 if (isSuccess) {
                     showToast("Got token")
                 } else {
@@ -38,7 +43,12 @@ class AuthorizationActivity : AppCompatActivity() {
         }
 
         btnGetAlbumWithError.setOnClickListener {
-            startActivity(AlbumActivity.callingIntent(this, albumIdError = edtAlbumId.text.toString()))
+            startActivity(
+                AlbumActivity.callingIntent(
+                    this,
+                    albumIdError = edtAlbumId.text.toString()
+                )
+            )
         }
 
         btnGetTrack.setOnClickListener {
