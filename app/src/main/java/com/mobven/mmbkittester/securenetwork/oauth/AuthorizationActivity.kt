@@ -16,7 +16,8 @@ class AuthorizationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_authorization)
         with(SecureNetwork) {
             enableOAuth2(
-                "https://accounts.spotify.com/api/token/"
+                "https://accounts.spotify.com/api/token/",
+                autoRefreshAccessToken = true
             )
         }
 

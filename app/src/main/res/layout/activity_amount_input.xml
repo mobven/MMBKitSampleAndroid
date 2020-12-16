@@ -7,10 +7,9 @@
     <com.mobven.uicomponents.amount.AmountInputView
         android:id="@+id/amountInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         app:box_background_color="@color/white"
         app:box_stroke_color="@color/limed_spruce"
-        app:edit_hint_text="Amount"
         app:edit_hint_text_color="@color/silver_sand"
         app:edit_text_appearance="@style/MyValueTextStyle"
         app:input_hint_text="Amount"
